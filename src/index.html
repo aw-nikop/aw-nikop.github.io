@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Bootstrap w/ Vite</title>
+</head>
+
+<body>
+    <div id="main-navbar" class="container-fluid text-center">
+        <div class="row pt-3 pb-3 align-items-center">
+            <a id="brand-logo" class="col-lg-2" href="/">
+                <img src="/cropped-logo-black.png" alt="" width="262">
+            </a>
+
+            <div class="col">
+                <a href="/" aria-current="page">HOME</a>
+            </div>
+            <div class="col">
+                <a href="/docs/about-us">ABOUT US</a>
+            </div>
+            <div class="col">
+                <a href="/docs/solutions">SOLUTIONS</a>
+            </div>
+            <div class="col">
+                <a href="/docs/who-we-work-with">WHO WE WORK WITH</a>
+            </div>
+            <div class="col">
+                <a href="/docs/altons-articles">ALTON'S ARTICLES</a>
+            </div>
+            <div class="vr"></div>
+            <div class="col">
+                <a href="tel:(206)782-4035">(206) 782-4035</a>
+            </div>
+            <div class="col"> <button type="button" class="btn orange-btn w-auto"><a href="/call"
+                        class="text-decoration-none">SCHEDULE A CALL</a></button></div>
+
+        </div>
+    </div>
+
+    <script type="module" src="./js/main.js"></script>
+
+    <main>
+        <div id="main-body">
+            <div class="container text-center">
+                <div class="row justify-content-center">
+                    <div class="col">
+                        <h1 class="display-3">Seattle's First Choice For <br>
+                            Small Business Computer Solutions</h1>
+                    </div>
+                </div>
+                <div class="row justify-content-center mt-5">
+                    <div class="col">
+                        <h2 class="">More than three decades of experience in creating hardware and software solutions
+                            <br> for
+                            hundreds of small businesses
+                        </h2>
+                    </div>
+                </div>
+                <div class="row justify-content-center mt-1">
+                    <div class="col">
+                        <button type="button" class="btn inverse-orange-btn"><a href="/call"
+                                class="text-decoration-none">Services</a></button>
+                        <button type="button" class="btn orange-btn"><a
+                                href="https://outlook.office365.com/book/AltonworksConsultation@altonworks.com/"
+                                class="text-decoration-none">Book A Meeting</a></button>
+                    </div>
+                </div>
+            </div>
+
+
+    </main>
+    <section>
+        <div id="company-card" class="container card">
+            <div id="companyList" class="carousel slide carousel-dark" data-bs-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class=" row justify-content-center align-items-center text-center ">
+                            <div class="col-2 justify-content-center">
+                                <img src="/stib.png" class="w-5" alt="STIB Logo" />
+                            </div>
+                            <div class="col-2 justify-content-center">
+                                <img src="/sbw.png" class="w-5" alt="SBW Logo" />
+                            </div>
+                            <div class="col-2 justify-content-center">
+                                <img src="/nssails.png" class="w-5" alt="North Sails Logo" />
+                            </div>
+                            <div class="col-2 justify-content-center">
+                                <img src="/h2.png" class="w-5" alt="H2 Logo" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#companyList" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#companyList" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="false"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col">
+                    <h2 class="display-4">About Us</h2>
+                </div>
+                <div class="col">
+                    <h2 class="display-4 mb-5">Contact Us</h2>
+                    <form>
+                        <div class="row justify-content-center">
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <input required type="string" class="form-control" id="floatingName">
+                                    <label for="floatingName">Name<span class="text-danger">*</span></label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <input required type="string" class="form-control" id="floatingSubject"
+                                        placeholder="Migration">
+                                    <label for="floatingSubject">Subject<span class="text-danger">*</span></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <input required type="email" class="form-control" id="floatingEmail"
+                                        placeholder="name@gmail.com" />
+                                    <label for="floatingEmail">Email<span class="text-danger">*</span></label>
+
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <input required type="tel" class="form-control" id="floatingPhone"
+                                        placeholder="(555) 555-5555" />
+                                    <label for="floatingPhone">Phone Number<span class="text-danger">*</span></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <textarea required class="form-control" placeholder="Leave a comment here"
+                                        id="floatingTextarea"></textarea>
+                                    <label for="floatingTextarea">Comments</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col">
+                                <button type="submit" class="btn orange-btn">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col">
+                    <h2 class="display-4">Our Services</h2>
+                    <p>We offer a wide range of services to meet the needs of small businesses, including:</p>
+                    <ul>
+                        <li>IT consulting and support</li>
+                        <li>Network setup and maintenance</li>
+                        <li>Hardware and software installation</li>
+                        <li>Data backup and recovery</li>
+                        <li>Cybersecurity solutions</li>
+                        <li>Cloud services</li>
+                        <li>Custom software development</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-5">
+                <div class="col">
+                    <h2 class="display-4">Testimonials</h2>
+                    <p>Here's what our clients have to say about us:</p>
+                    <blockquote class="blockquote">
+                        <p class="mb-2">"Altonworks provided exceptional service and support for our IT needs. Their
+                            team is knowledgeable and responsive."</p>
+                        <footer class="blockquote-footer">John Doe, <cite title="Source Title">ABC Corp</cite></footer>
+                    </blockquote>
+                    <blockquote class="blockquote">
+                        <p class="mb-2">"We highly recommend Altonworks for their professionalism and expertise in IT
+                            solutions."</p>
+                        <footer class="blockquote-footer">Jane Smith, <cite title="Source Title">XYZ Ltd</cite></footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Modal trigger button -->
+    <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#signUpForm">
+        Launch demo modal
+    </button>
+
+    <!-- Modal Body -->
+    <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+    <div class="modal fade" id="signUpForm" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+        role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleId">
+                        Modal title
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">Body</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+
+
+                    </button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional: Place to the bottom of scripts -->
+
+
+</body>
+
+</html>
