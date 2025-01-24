@@ -28,6 +28,7 @@ const docInputs = docFiles.reduce((inputs, file) => {
 }, {});
 
 export default {
+  base: "/",
   plugins: [
     handlebars({
       partialDirectory: resolve(__dirname, "src", "partials"),
