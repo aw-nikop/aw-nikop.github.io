@@ -1,7 +1,10 @@
-const path = require('path')
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vite'
+import inject from '@rollup/plugin-inject'
+import handlebars from 'vite-plugin-handlebars';
+
+import { readdirSync } from 'node:fs'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const SCSS_Logger = {
@@ -14,11 +17,25 @@ const SCSS_Logger = {
         console.warn(`▲ [WARNING]: ${message}`);
     },
 };
+
+
+const docsDir = resolve(__dirname, 'src', 'docs')
+const docFiles = readdirSync(docsDir).filter(file => file.endsWith('.html'))
+
+const docInputs = docFiles.reduce((inputs, file) => {
+    const name = file.replace('.html', '')
+    inputs[name] = resolve(docsDir, file)
+    return inputs
+}, {})
+
 export default {
-    root: path.resolve(__dirname, 'src'),
+    plugins: [handlebars({
+        partialDirectory: resolve(__dirname, 'src', 'partials'),
+    })],
+    root: resolve(__dirname, 'src'),
     resolve: {
         alias: {
-            '~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap'),
+            '~bootstrap': resolve(__dirname, 'node_modules/bootstrap'),
         }
     },
     server: {
@@ -29,7 +46,9 @@ export default {
         rollupOptions: {
             input: {
                 main: resolve(__dirname, 'src', 'index.html'),
-                docs: resolve(__dirname, 'src', 'docs', 'docs/index.html'),
+                ...docInputs,
+                navbar: resolve(__dirname, 'src', 'partials/navbar.html'),
+                footer: resolve(__dirname, 'src', 'partials/footer.html'),
             },
         },
     },
@@ -40,5 +59,4 @@ export default {
             },
         },
     },
-
 }

@@ -4,67 +4,36 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <title>Bootstrap w/ Vite</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <title>Altonworks</title>
 </head>
 
 <body>
-    <div id="main-navbar" class="container-fluid text-center">
-        <div class="row pt-3 pb-3 align-items-center">
-            <a id="brand-logo" class="col-lg-2" href="/">
-                <img src="/cropped-logo-black.png" alt="" width="262">
-            </a>
+    {{> navbar}}
 
-            <div class="col">
-                <a href="/" aria-current="page">HOME</a>
-            </div>
-            <div class="col">
-                <a href="/docs/about-us">ABOUT US</a>
-            </div>
-            <div class="col">
-                <a href="/docs/solutions">SOLUTIONS</a>
-            </div>
-            <div class="col">
-                <a href="/docs/who-we-work-with">WHO WE WORK WITH</a>
-            </div>
-            <div class="col">
-                <a href="/docs/altons-articles">ALTON'S ARTICLES</a>
-            </div>
-            <div class="vr"></div>
-            <div class="col">
-                <a href="tel:(206)782-4035">(206) 782-4035</a>
-            </div>
-            <div class="col"> <button type="button" class="btn orange-btn w-auto"><a href="/call"
-                        class="text-decoration-none">SCHEDULE A CALL</a></button></div>
 
-        </div>
-    </div>
-
-    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./main.js"></script>
 
     <main>
         <div id="main-body">
             <div class="container text-center">
                 <div class="row justify-content-center">
                     <div class="col">
-                        <h1 class="display-3">Seattle's First Choice For <br>
+                        <h1 class="display-lg-3">Seattle's First Choice For <br>
                             Small Business Computer Solutions</h1>
                     </div>
                 </div>
                 <div class="row justify-content-center mt-5">
                     <div class="col">
-                        <h2 class="">More than three decades of experience in creating hardware and software solutions
-                            <br> for
-                            hundreds of small businesses
-                        </h2>
+                        <p class="fs-5 text-white fw-light">
+                            More than three decades of experience in creating hardware and software solutions
+                            <br> for hundreds of small businesses
+                        </p>
                     </div>
                 </div>
                 <div class="row justify-content-center mt-1">
                     <div class="col">
-                        <button type="button" class="btn inverse-orange-btn"><a href="/call"
+                        <button type="button" class="btn inverse-orange-btn"><a href="#service-grid"
                                 class="text-decoration-none">Services</a></button>
                         <button type="button" class="btn orange-btn"><a
                                 href="https://outlook.office365.com/book/AltonworksConsultation@altonworks.com/"
@@ -81,17 +50,15 @@
                 <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active">
                         <div class=" row justify-content-center align-items-center text-center ">
+
                             <div class="col-2 justify-content-center">
-                                <img src="/stib.png" class="w-5" alt="STIB Logo" />
+                                <img src="/Illuminage.png" class="w-5 img-fluid" alt="Illuminage Logo" />
                             </div>
                             <div class="col-2 justify-content-center">
-                                <img src="/sbw.png" class="w-5" alt="SBW Logo" />
+                                <img src="/nssails.png" class="w-5 img-fluid" alt="North Sails Logo" />
                             </div>
                             <div class="col-2 justify-content-center">
-                                <img src="/nssails.png" class="w-5" alt="North Sails Logo" />
-                            </div>
-                            <div class="col-2 justify-content-center">
-                                <img src="/h2.png" class="w-5" alt="H2 Logo" />
+                                <img src="/h2.png" class="w-5 img-fluid" alt="H2 Logo" />
                             </div>
                         </div>
 
@@ -109,135 +76,375 @@
         </div>
     </section>
 
-    <section>
-        <div class="container mt-5">
-            <div class="row justify-content-center">
-                <div class="col">
-                    <h2 class="display-4">About Us</h2>
-                </div>
-                <div class="col">
-                    <h2 class="display-4 mb-5">Contact Us</h2>
-                    <form>
-                        <div class="row justify-content-center">
-                            <div class="col">
-                                <div class="form-floating mb-3">
-                                    <input required type="string" class="form-control" id="floatingName">
-                                    <label for="floatingName">Name<span class="text-danger">*</span></label>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="form-floating mb-3">
-                                    <input required type="string" class="form-control" id="floatingSubject"
-                                        placeholder="Migration">
-                                    <label for="floatingSubject">Subject<span class="text-danger">*</span></label>
-                                </div>
+    <section id="services-contact">
+        <div class="container-fluid mt-5">
+            <div id="what-we-do">
+                <h2 class="display-4">What We Do</h2>
+                <ul>
+                    <li> We believe in providing good old-fashioned tech
+                        support</li>
+                    <li> Locally present and ready to come
+                        on-site to fix your networking issues</li>
+                    <li> Choose between flexible
+                        Basic and Premium Managed IT Plans that cater to businesses of all size</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="display-4">Contact Us</h2>
+                <p>
+                    Drop us an email with a request and we will get back to you as soon as we can
+                </p>
+                <form>
+                    <div class="row justify-content-center">
+                        <div class="col">
+                            <div class="form-floating mb-3">
+                                <input required type="string" class="form-control" id="floatingName" placeholder="Name">
+                                <label for="floatingName">Name<span class="text-danger"> *</span></label>
                             </div>
                         </div>
-                        <div class="row justify-content-center">
-                            <div class="col">
-                                <div class="form-floating mb-3">
-                                    <input required type="email" class="form-control" id="floatingEmail"
-                                        placeholder="name@gmail.com" />
-                                    <label for="floatingEmail">Email<span class="text-danger">*</span></label>
+                        <div class="col">
+                            <div class="form-floating mb-3">
+                                <input required type="string" class="form-control" id="floatingSubject"
+                                    placeholder="Migration">
+                                <label for="floatingSubject">Subject<span class="text-danger"> *</span></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col">
+                            <div class="form-floating mb-3">
+                                <input required type="email" class="form-control" id="floatingEmail"
+                                    placeholder="name@gmail.com" />
+                                <label for="floatingEmail">Email<span class="text-danger"> *</span></label>
 
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="form-floating mb-3">
-                                    <input required type="tel" class="form-control" id="floatingPhone"
-                                        placeholder="(555) 555-5555" />
-                                    <label for="floatingPhone">Phone Number<span class="text-danger">*</span></label>
-                                </div>
                             </div>
                         </div>
-                        <div class="row justify-content-center">
-                            <div class="col">
-                                <div class="form-floating mb-3">
-                                    <textarea required class="form-control" placeholder="Leave a comment here"
-                                        id="floatingTextarea"></textarea>
-                                    <label for="floatingTextarea">Comments</label>
-                                </div>
+                        <div class="col">
+                            <div class="form-floating mb-3">
+                                <input required type="tel" class="form-control" id="floatingPhone"
+                                    placeholder="(555) 555-5555" />
+                                <label for="floatingPhone">Phone Number<span class="text-danger"> *</span></label>
                             </div>
                         </div>
-                        <div class="row justify-content-center">
-                            <div class="col">
-                                <button type="submit" class="btn orange-btn">Submit</button>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col">
+                            <div class="form-floating mb-3">
+                                <textarea required class="form-control" placeholder="Leave a comment here"
+                                    id="floatingTextarea"></textarea>
+                                <label for="floatingTextarea">Comments</label>
                             </div>
                         </div>
-                    </form>
-
-                </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col">
+                            <button type="submit" class="btn orange-btn">Submit</button>
+                        </div>
+                    </div>
+                </form>
 
             </div>
+
         </div>
     </section>
-    <section>
-        <div class="container mt-5">
-            <div class="row justify-content-center">
-                <div class="col">
-                    <h2 class="display-4">Our Services</h2>
-                    <p>We offer a wide range of services to meet the needs of small businesses, including:</p>
-                    <ul>
-                        <li>IT consulting and support</li>
-                        <li>Network setup and maintenance</li>
-                        <li>Hardware and software installation</li>
-                        <li>Data backup and recovery</li>
-                        <li>Cybersecurity solutions</li>
-                        <li>Cloud services</li>
-                        <li>Custom software development</li>
-                    </ul>
-                </div>
+
+    <section id="service-grid">
+
+        <div class="row row-cols-2 row-cols-md-4 g-4">
+            <div class="col">
+                <a href="/docs/tech-support" role="button" class="card">
+                    <div class="card-icon-container">
+                        <i class="bi bi-headset "></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Tech Support</p>
+                    </div>
+                </a>
             </div>
-            <div class="row justify-content-center mt-5">
-                <div class="col">
-                    <h2 class="display-4">Testimonials</h2>
-                    <p>Here's what our clients have to say about us:</p>
-                    <blockquote class="blockquote">
-                        <p class="mb-2">"Altonworks provided exceptional service and support for our IT needs. Their
-                            team is knowledgeable and responsive."</p>
-                        <footer class="blockquote-footer">John Doe, <cite title="Source Title">ABC Corp</cite></footer>
-                    </blockquote>
-                    <blockquote class="blockquote">
-                        <p class="mb-2">"We highly recommend Altonworks for their professionalism and expertise in IT
-                            solutions."</p>
-                        <footer class="blockquote-footer">Jane Smith, <cite title="Source Title">XYZ Ltd</cite></footer>
-                    </blockquote>
-                </div>
+            <div class="col">
+                <a href="/docs/networking" role="button" class="card">
+                    <div class="card-icon-container">
+                        <i class="bi bi-router-fill "></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Networking</p>
+                    </div>
+                </a>
             </div>
+            <div class="col">
+                <a href="/docs/managed-it-plans" role="button" class="card">
+                    <div class="card-icon-container">
+                        <i class="bi bi-gear-wide-connected "></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Managed IT Plans</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="/docs/hybrid-cloud-migrations" role="button" class="card">
+                    <div class="card-icon-container">
+                        <i class="bi bi-cloud-arrow-up-fill "></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Hybrid Cloud Migrations</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row row-cols-2 row-cols-md-4 g-4 mt-4">
+            <div class="col">
+                <a href="/docs/firewall" role="button" class="card">
+                    <div class="card-icon-container">
+                        <i class="bi bi-bricks"></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Firewalls with VPN</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="/docs/cybersecurity" role="button" class="card">
+                    <div class="card-icon-container">
+                        <i class="bi bi-person-fill-lock "></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Cybersecurity and Compliance</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="/docs/backup" role="button" class="card">
+                    <div class="card-icon-container">
+                        <i class="bi bi-database-fill "></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Backup and Disaster Recovery Plans</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="/docs/software" role="button" class="card">
+                    <div class="card-icon-container">
+                        <i class="bi bi-code "></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Custom Software Solutions</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </section>
+    <section id="about-us">
+        <div class="container-fluid">
+            <div>
+                <h2 class="display-4">Alton Computer Solutions</h2>
+                <p>Alton Computer Solutions was established in 2006 with the idea of exceptional service and support
+                    paired with robust software and hardware solutions. Our goal is to help your business succeed by
+                    providing experienced computer and networking support in a timely, professional manner with proven
+                    software, hardware, and Cloud Solutions.</p>
+                <p>Alton Computer Solutions has more than two decades of experience creating hardware and software
+                    solutions for hundreds of small businesses. Our staff enjoys working closely with customers to
+                    create systems that adapt to their unique business needs.</p>
+                <p>Alton Computer Solutions is the outsourced IT provider for Seattle-area
+                    businesses. We are up to speed on the latest IT Solutions that work reliability and will not break
+                    the bank. We listen to our customers and do not force a “one size fits all” solution. Instead, we
+                    build a computer network around your
+                    specific business needs.</p>
+            </div>
+            <div>
+                <img loading="lazy" decoding="async" width="434" height="681"
+                    src="https://www.altoncomputersolutions.com/wp-content/uploads/2021/07/002.png"
+                    class="img-fluid float-end" alt="">
+            </div>
+        </div>
+
         </div>
     </section>
-    <!-- Modal trigger button -->
-    <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#signUpForm">
-        Launch demo modal
-    </button>
 
-    <!-- Modal Body -->
-    <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
-    <div class="modal fade" id="signUpForm" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
-        role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalTitleId">
-                        Modal title
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">Body</div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+    <section id="meet-our-team">
+        <div class="container-fluid">
+            <div class="team-card">
+                <span>
+                    <div class="img-container">
+                        <img src="/chris1.jpg" class="img-fluid float-start" alt="Chris Profile Picture">
+                    </div>
 
+                    <h4>Chris</h4>
+                    <p>
+                        President
+                    </p>
+                </span>
+            </div>
+            <div class="team-card">
+                <span>
+                    <div class="img-container">
+                        <img src="/blake1.jpg" class="img-fluid float-start" alt="Blake Profile Picture">
+                    </div>
 
-                    </button>
-                    <button type="button" class="btn btn-primary">Save</button>
-                </div>
+                    <h4>Blake</h4>
+                    <p>
+                        Senior Network Engineer
+                    </p>
+                </span>
+                <span>
+                    <div class="img-container">
+                        <img src="/rex1.jpg" class="img-fluid float-start" alt="Rex Profile Picture">
+                    </div>
+
+                    <h4>Rex</h4>
+                    <p>
+                        Computer Technician
+                    </p>
+                </span>
+                <span>
+                    <div class="img-container">
+                        <img src="/niko1.jpg" class="img-fluid float-start" alt="Niko Profile Picture">
+                    </div>
+
+                    <h4>Niko</h4>
+                    <p>
+                        DevOps Engineer
+                    </p>
+                </span>
+
             </div>
         </div>
-    </div>
+
+    </section>
+
+    <section id="testimonials">
+        <div>
+            <h3 class="display-5">What our customers are saying about us</h3>
+            <i class="trq bi bi-quote"></i>
+
+            <div id="testimonial" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-touch="true">
+                <div class="carousel-indicators">
+                    <button data-bs-target="#testimonial" data-bs-slide-to="0" class="active" aria-current="true"
+                        aria-label="First slide"></button>
+                    <button data-bs-target="#testimonial" data-bs-slide-to="1" aria-label="Second slide"></button>
+                    <button data-bs-target="#testimonial" data-bs-slide-to="2" aria-label="Third slide"></button>
+                    <button data-bs-target="#testimonial" data-bs-slide-to="3" aria-label="Fourth slide"></button>
+                </div>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="d-md-block">
+                            <figure class="t-quote">
+                                <blockquote class="blockquote">
+
+                                    <p>“For more than 10 years, we have been completely secure with our computer and
+                                        internet technology, both at work and at home, thanks to the skillful support
+                                        that Chris and his team have provided. To top it all off, Chris is just a
+                                        pleasure to be around.”</p>
+                                </blockquote>
+                                <div class="blockcaption">
+                                    <div>
+                                        <img src="/stib.png" class="img-fluid float-start" alt="STIB Law Firm Logo">
+                                    </div>
+                                    <div>
+                                        Sean Bleck
+                                        <br>
+                                        <cite title="Source Title">Attorney, STIB Law Firm</cite>
+                                    </div>
+                                </div>
+
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-md-block">
+                            <figure class="t-quote">
+                                <blockquote class="blockquote">
+
+                                    <p>“I cannot say enough great things about Chris and his team at Alton Computer
+                                        Solutions. As the owner of a small accounting business, I depend heavily on all
+                                        of my technical components running smoothly: my server, network, computers and
+                                        all of the additional components. Knowing that my clients’ work is also
+                                        protected and secure is paramount for my business. Alton Computer Solutions
+                                        equals Peace of Mind.”</p>
+                                </blockquote>
+                                <div class="blockcaption">
+                                    <div>
+                                        <img src="/h2.png" class="img-fluid float-start" alt="H2 Logo">
+                                    </div>
+                                    <div>
+                                        Donna D Hadaller
+                                        <br>
+                                        <cite title="Source Title">Owner of H2 Accounting & Bookkeeping</cite>
+                                    </div>
+                                </div>
+
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-md-block">
+                            <figure class="t-quote">
+                                <blockquote class="blockquote">
+
+                                    <p>“We’ve worked with Chris and his team for more than a decade. He’s kept our
+                                        computers running smoothly and saved us from attacking viruses, too!”</p>
+                                </blockquote>
+                                <div class="blockcaption">
+                                    <div>
+                                        <img src="/Illuminage.png" class="img-fluid float-start" alt="Illuminage Logo">
+                                    </div>
+                                    <div>
+                                        Aaron Howard
+                                        <br>
+                                        <cite title="Source Title">VP/Web Services Director IlluminAge</cite>
+                                    </div>
+                                </div>
+
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-md-block">
+                            <figure class="t-quote">
+                                <blockquote class="blockquote">
+
+                                    <p>“We are a business comprised of users who understand everything about computers
+                                        and those who don’t know exactly how the computers work, but we all need our
+                                        computers to work well! Chris and his team have taken great care of all of our
+                                        computer needs in both a timely and patient manner. All of us would highly
+                                        recommend Alton Computer Solutions!”</p>
+                                </blockquote>
+                                <div class="blockcaption">
+                                    <div>
+                                        <img src="/nssails.png" class="img-fluid float-start" alt="North Sails Logo">
+                                    </div>
+                                    <div>
+                                        Ann Christiansen
+                                        <br>
+                                        <cite title="Source Title">Office Manager, North Sails</cite>
+                                    </div>
+                                </div>
+
+                            </figure>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+            <i class="blq bi bi-quote"></i>
+
+        </div>
+
+    </section>
 
     <!-- Optional: Place to the bottom of scripts -->
-
+     <section>
+        {{>footer}}
+     </section>
 
 </body>
+
+{{>copyright}}
 
 </html>
