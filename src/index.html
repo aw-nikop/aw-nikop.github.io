@@ -94,48 +94,50 @@
                 <p>
                     Drop us an email with a request and we will get back to you as soon as we can
                 </p>
-                <form>
+                <form action="https://api.web3forms.com/submit" method="POST" id="form">
+                    <input type="hidden" name="access_key" value="e1155a87-b273-4e52-8aa5-3e44e8ae368e">
                     <div class="row justify-content-center">
                         <div class="col">
                             <div class="form-floating mb-3">
-                                <input required type="string" class="form-control" id="floatingName" placeholder="Name">
-                                <label for="floatingName">Name<span class="text-danger"> *</span></label>
+                                <input required type="string" class="form-control" id="name" name="name" placeholder="Name">
+                                <label for="name">Name<span class="text-danger"> *</span></label>
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-floating mb-3">
-                                <input required type="string" class="form-control" id="floatingSubject"
+                                <input required type="string" class="form-control" name="subject" id="subject"
                                     placeholder="Migration">
-                                <label for="floatingSubject">Subject<span class="text-danger"> *</span></label>
+                                <label for="subject">Subject<span class="text-danger"> *</span></label>
                             </div>
                         </div>
                     </div>
                     <div class="row justify-content-center">
                         <div class="col">
                             <div class="form-floating mb-3">
-                                <input required type="email" class="form-control" id="floatingEmail"
+                                <input required type="email" class="form-control" name="email" id="email"
                                     placeholder="name@gmail.com" />
-                                <label for="floatingEmail">Email<span class="text-danger"> *</span></label>
+                                <label for="email">Email<span class="text-danger"> *</span></label>
 
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-floating mb-3">
-                                <input required type="tel" class="form-control" id="floatingPhone"
+                                <input required type="tel" class="form-control" name="phone" id="phone"
                                     placeholder="(555) 555-5555" />
-                                <label for="floatingPhone">Phone Number<span class="text-danger"> *</span></label>
+                                <label for="phone">Phone Number<span class="text-danger"> *</span></label>
                             </div>
                         </div>
                     </div>
                     <div class="row justify-content-center">
                         <div class="col">
                             <div class="form-floating mb-3">
-                                <textarea required class="form-control" placeholder="Leave a comment here"
-                                    id="floatingTextarea"></textarea>
-                                <label for="floatingTextarea">Comments</label>
+                                <textarea required class="form-control" name="comments" placeholder="Leave a comment here"
+                                    id="comments"></textarea>
+                                <label for="comments">Comments</label>
                             </div>
                         </div>
                     </div>
+                    <input type="hidden" name="redirect" value="/thank-you">
                     <div class="row justify-content-center">
                         <div class="col">
                             <button type="submit" class="btn orange-btn">Submit</button>

@@ -4,26 +4,27 @@
 
 :root {
   --aw-orange: #d06108;
+  --aw-orange-light: #8b410491;
   --alternate-bg: #f5f6f7;
 }
 
 @font-face {
   font-family: "Nexa";
-  src: url("/src/public/fonts/Nexa\ Regular.otf");
+  src: url("/fonts/Nexa_Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Nexa";
-  src: url("/src/public/fonts/Nexa\ Bold.otf");
+  src: url("/fonts/Nexa_Bold.otf") format("opentype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Nexa";
-  src: url("/src/public/fonts/Nexa\ Light.otf");
+  src: url("/fonts/Nexa_Light.otf") format("opentype");
   font-weight: light;
   font-style: normal;
 }
@@ -210,10 +211,10 @@ section {
     }
   }
 
-  &:nth-child(odd) {
+  &:nth-child(even) {
     background-color: var(--alternate-bg);
   }
-  &:nth-child(even) {
+  &:nth-child(odd) {
     background-color: white;
   }
 }
@@ -287,6 +288,76 @@ section {
     background-color: var(--alternate-bg);
   }
 }
+#solutions-body {
+  padding: 0 !important;
+  background-color: var(--alternate-bg);
+  margin-bottom: 5vh;
+  #hero {
+    width: 100%;
+    color: white;
+    padding: 7vh 0;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 2000px var(--aw-orange-light);
+    text-align: center;
+    h1 {
+      font-size: 4rem;
+      font-weight: bolder;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    }
+    .orange-border {
+      width: 20%;
+      height: 10px;
+      background-color: var(--aw-orange);
+      display: block;
+      justify-self: center;
+
+    }
+  }
+
+  section {
+    padding: 7vh 7vw;
+    p {
+      font-size: 1.3em;
+    }
+
+
+  }
+  .row {
+    margin: 5vh 0;
+  }
+  .card {
+    height: 100%;
+    border: 0;
+    background-color: transparent;
+  }
+  .card-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+    font-size: 4rem;
+  }
+
+  .card-body {
+    text-align: center;
+
+    h5 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+  
+  &+div>#aw-footer {
+    margin: 0 10vw;
+    @media (max-width: 800px) {
+      margin: 0;
+      
+    }
+  }
+
+}
+
 div#aw-footer {
   display: flex;
   flex-direction: row;
