@@ -7,7 +7,7 @@
     "host": "vite --host",
     "preview": "vite preview",
     "build": "vite build",
-    "deploy": "gh-pages -d src/dist",
+    "publish": "gh-pages -d src/dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "homepage": "https://aw-nikop.github.io/",
