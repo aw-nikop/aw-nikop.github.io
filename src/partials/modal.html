@@ -1,0 +1,70 @@
+<!-- Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="signupModalLabel">Contact Us</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <p>
+                        Drop us an email with a request and we will get back to you as soon as we can
+                    </p>
+                    <form action="https://api.web3forms.com/submit" method="POST" id="form" autocomplete="off">
+                        <input type="hidden" name="access_key" value="e1155a87-b273-4e52-8aa5-3e44e8ae368e">
+                        <div class="row justify-content-center">
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <input required="" type="string" class="form-control" id="name" name="name"
+                                        placeholder="Name">
+                                    <label for="name">Name<span class="text-danger"> *</span></label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <input required="" type="string" class="form-control" name="subject" id="subject"
+                                        placeholder="Migration">
+                                    <label for="subject">Subject<span class="text-danger"> *</span></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <input required="" type="email" class="form-control" name="email" id="email"
+                                        placeholder="name@gmail.com">
+                                    <label for="email">Email<span class="text-danger"> *</span></label>
+
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <input required="" type="tel" class="form-control" name="phone" id="phone"
+                                        placeholder="(555) 555-5555">
+                                    <label for="phone">Phone Number<span class="text-danger"> *</span></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <textarea required="" class="form-control" name="comments"
+                                        placeholder="Leave a comment here" id="comments"></textarea>
+                                    <label for="comments">Comments</label>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="hidden" name="redirect" value="/thank-you">
+                        <div class="row justify-content-center">
+                            <div class="col">
+                                <button type="submit" class="btn orange-btn">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

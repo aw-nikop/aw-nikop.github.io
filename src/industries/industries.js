@@ -14,9 +14,6 @@ fetch("/industries.json")
         const html = template(data[lastPart]);
         console.log(html)
         document.getElementById("industries-body").innerHTML = html;
-        document.getElementById(
-            "hero"
-        ).style.backgroundImage = `url(${data[lastPart].image})`;
     })
     .catch((error) => {
         console.error("Error:", error);
@@ -33,13 +30,13 @@ const t = `
     <p>
         {{p1}}
     </p>
-
+    <hr>
     <div class="row flex-column flex-sm-row">
-    Our Services Include:
+    <h3>Our Services Include:</h3>
     <ul>
         {{#each bp}}
         <div class="col">
-            <li><bold>{{title}}:</bold>{{content}}</li>
+            <li><span class='fw-bold'>{{title}}</span><br> {{content}}</li>
         </div>
         {{/each}}
     </ul>

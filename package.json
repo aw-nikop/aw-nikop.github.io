@@ -26,6 +26,7 @@
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "handlebars": "^4.7.8",
+    "localstorage-slim": "^2.7.1",
     "vite-plugin-handlebars": "^2.0.0"
   }
 }
