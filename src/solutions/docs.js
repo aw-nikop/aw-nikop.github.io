@@ -9,6 +9,7 @@ fetch("/solutions.json")
   .then((response) => response.json())
   .then((data) => {
     const url = window.location.href.split("#")[0];
+    console.log(url)
     const lastPart = getLastUrlPart(url);
     const template = Handlebars.compile(t);
     const html = template(data[lastPart]);

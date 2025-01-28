@@ -1,7 +1,6 @@
 // Import all of Bootstrap's CSS
 @import "~bootstrap/scss/bootstrap";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
-@import "./industries/industry.scss";
 @import "./partials/partial.scss";
 @import "./solutions/solutions.scss";
 :root {
@@ -14,12 +13,10 @@
 
   @media (prefers-color-scheme: dark) {
     --alternate-bg: #333;
-    --main-bg: color-mix(in srgb,rgb(163 178 242),rgb(20 20 20) 94%);
+    --main-bg: color-mix(in srgb, rgb(163 178 242), rgb(20 20 20) 94%);
     --font-color: white;
   }
 }
-
-
 
 @font-face {
   font-family: "Nexa";
@@ -87,15 +84,11 @@ body {
   }
 }
 
-
-
 #n-pl {
   position: sticky;
   z-index: 1000;
   top: 0;
 }
-
-
 
 #main-body {
   background-image: url("/front_page_bg.png");
@@ -209,7 +202,6 @@ section {
   &:nth-child(odd) {
     background-color: var(--main-bg);
   }
-
 }
 #team-body {
   p {
@@ -334,9 +326,6 @@ section {
     background-color: var(--alternate-bg);
   }
 }
-
-
-
 
 #meet-our-team {
   .team-card {

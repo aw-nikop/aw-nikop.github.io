@@ -53,10 +53,8 @@ export default {
     rollupOptions: {
       input: {
         main: resolve(__dirname, "src", "index.html"),
-        ...getDirFiles("industries"),
         ...getDirFiles("solutions"),
         data: resolve(__dirname, "src", "public/solutions.json"),
-        industries: resolve(__dirname, "src", "public/industries.json"),
         navbar: resolve(__dirname, "src", "partials/navbar.html"),
         footer: resolve(__dirname, "src", "partials/footer.html"),
         team: resolve(__dirname, "src", "team.html"),
