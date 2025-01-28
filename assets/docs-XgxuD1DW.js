@@ -1,4 +1,4 @@
-import{H as c}from"./handlebars-Zdko14Kt.js";function n(t){const e=t.split("/");return e.pop()||e.pop()}fetch("/solutions.json").then(t=>t.json()).then(t=>{const e=window.location.href.split("#")[0],s=n(e),o=c.compile(a)(t[s]);document.getElementById("solutions-body").innerHTML=o,document.getElementById("hero").style.backgroundImage=`url(${t[s].image})`}).catch(t=>{console.error("Error:",t)});const a=`
+import{H as c}from"./handlebars-oU-ZQY5K.js";function n(t){const e=t.split("/");return e.pop()||e.pop()}fetch("/solutions.json").then(t=>t.json()).then(t=>{const e=window.location.href.split("#")[0],s=n(e),o=c.compile(a)(t[s]);document.getElementById("solutions-body").innerHTML=o,document.getElementById("hero").style.backgroundImage=`url(${t[s].image})`}).catch(t=>{console.error("Error:",t)});const a=`
 
 <div id="hero">
     <h1> {{title}} </h1>
