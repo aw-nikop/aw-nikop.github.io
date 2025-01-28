@@ -18,14 +18,19 @@ const SCSS_Logger = {
   },
 };
 
-const docsDir = resolve(__dirname, "src", "docs");
-const docFiles = readdirSync(docsDir).filter((file) => file.endsWith(".html"));
+function getDirFiles(dir) {
+  const docsDir = resolve(__dirname, "src", dir);
+  const docFiles = readdirSync(docsDir).filter((file) => file.endsWith(".html"));
 
-const docInputs = docFiles.reduce((inputs, file) => {
-  const name = file.replace(".html", "");
-  inputs[name] = resolve(docsDir, file);
-  return inputs;
-}, {});
+  const docInputs = docFiles.reduce((inputs, file) => {
+    const name = file.replace(".html", "");
+    inputs[name] = resolve(docsDir, file);
+    return inputs;
+  }, {});
+
+  return docInputs
+}
+
 
 export default {
   base: "/",
@@ -48,10 +53,13 @@ export default {
     rollupOptions: {
       input: {
         main: resolve(__dirname, "src", "index.html"),
-        ...docInputs,
-        data: resolve(__dirname, "src", "public/data.json"),
+        ...getDirFiles("industries"),
+        ...getDirFiles("solutions"),
+        data: resolve(__dirname, "src", "public/solutions.json"),
+        industries: resolve(__dirname, "src", "public/industries.json"),
         navbar: resolve(__dirname, "src", "partials/navbar.html"),
         footer: resolve(__dirname, "src", "partials/footer.html"),
+        team: resolve(__dirname, "src", "team.html"),
         "thank-you": resolve(__dirname, "src", "thank-you.html"),
       },
     },

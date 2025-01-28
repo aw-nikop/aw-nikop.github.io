@@ -5,7 +5,7 @@ function getLastUrlPart(url) {
   return parts.pop() || parts.pop(); // handle potential trailing slash
 }
 
-fetch("/data.json")
+fetch("/solutions.json")
   .then((response) => response.json())
   .then((data) => {
     const url = window.location.href.split("#")[0];

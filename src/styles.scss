@@ -6,6 +6,55 @@
   --aw-orange: #d06108;
   --aw-orange-light: #8b410491;
   --alternate-bg: #f5f6f7;
+  --main-bg: white;
+  --font-color: black;
+  color: black;
+
+  @media (prefers-color-scheme: dark) {
+    --alternate-bg: #333;
+    --main-bg: #212529;
+    --font-color: white;
+  }
+}
+
+.offcanvas {
+  background-color: var(--main-bg);
+  color: var(--font-color);
+
+  .accordion-item,
+  .accordion-button {
+    background-color: var(--main-bg);
+    color: var(--font-color);
+    a {
+      margin: 0 !important;
+    }
+  }
+  .offcanvas-title {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .accordion-button::after {
+    @media (prefers-color-scheme: dark) {
+      background-image: url("/arrow-down-short.svg");
+    }
+    background-image: url("/arrow-down-short-dark.svg");
+  }
+  ul {
+    list-style-type: none;
+    text-align: left;
+  }
+  .accordion-item > .accordion-body {
+    text-align: left;
+  }
+}
+
+.brand-logo {
+  @media (prefers-color-scheme: dark) {
+    content: url("/cropped-logo-white.png");
+    height: auto;
+  }
 }
 
 @font-face {
@@ -33,6 +82,8 @@ body {
   font-family: "Nexa", sans-serif;
   font-weight: normal;
   scrollbar-gutter: stable;
+  background-color: var(--main-bg);
+  color: var(--font-color);
 }
 
 .orange-btn {
@@ -88,12 +139,20 @@ body {
 }
 
 #main-navbar {
-  background-color: white;
+  background-color: var(--main-bg);
   max-width: 100%;
+
+  .ac-button {
+    background-color: inherit;
+    color: inherit;
+    outline: none;
+    border: none;
+    box-shadow: none;
+  }
   div[class*="col"] {
     a:not(.dropdown-item) {
       border-bottom: 3px solid transparent;
-      color: black;
+      color: var(--font-color);
       text-decoration: none;
       text-wrap: nowrap;
       transition: 0.2s ease-out;
@@ -109,6 +168,15 @@ body {
   .dropdown-menu {
     margin-left: -10px !important;
     border-radius: 0;
+    background-color: var(--main-bg);
+    color: var(--font-color);
+
+    .dropdown-item {
+      color: var(--font-color);
+      &:hover {
+        background-color: var(--alternate-bg);
+      }
+    }
   }
 }
 
@@ -144,7 +212,15 @@ body {
   border: 0;
   border-radius: 45px;
   z-index: 3;
-  background-color: white;
+
+  background-color: var(--main-bg);
+  @media(prefers-color-scheme: light) {
+    .carousel-control-next,
+    .carousel-control-prev /*, .carousel-indicators */ {
+      filter: invert(100%);
+    }
+  }
+  
 }
 
 .nav-links {
@@ -185,7 +261,7 @@ section {
   &:last-child {
     padding: 2vh 5vw;
   }
-
+  color: var(--font-color);
   &#about-us {
     > div.container-fluid {
       display: flex;
@@ -215,10 +291,48 @@ section {
     background-color: var(--alternate-bg);
   }
   &:nth-child(odd) {
-    background-color: white;
+    background-color: var(--main-bg);
   }
 }
+#team-body {
+  p {
+    font-size: 1.1rem;
+  }
+  .card {
+    background-color: var(--alternate-bg);
+    color: var(--font-color);
+    border: 0;
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
 
+    @keyframes target-fade {
+      from {
+        background-color: var(--aw-orange);
+      }
+      to {
+        background-color: var(--alternate-bg);
+      }
+    }
+    &:target {
+      animation: target-fade 3s;
+    }
+  }
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .row {
+    > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  img {
+    width: 200px;
+  }
+}
 #what-we-do {
   ul {
     padding: 0;
@@ -243,6 +357,10 @@ section {
       content: "\F6A6";
       font-family: "bootstrap-icons";
     }
+    li:nth-child(4)::marker {
+      content: "\F65E";
+      font-family: "bootstrap-icons";
+    }
   }
 }
 
@@ -251,9 +369,10 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: start;
+
+    row-gap: 5vw;
     > div {
-      width: 50%;
+      width: 45%;
       @media (max-width: 800px) {
         width: 100%;
       }
@@ -263,6 +382,9 @@ section {
       flex-direction: column;
     }
   }
+  #form {
+    color: black !important;
+  }
 }
 
 #service-grid {
@@ -270,6 +392,8 @@ section {
     border: 0;
     border-radius: 15px;
     transition: 0.3s;
+    background-color: var(--main-bg);
+    color: var(--font-color);
     .card-text {
       text-align: center;
     }
@@ -311,7 +435,6 @@ section {
       background-color: var(--aw-orange);
       display: block;
       justify-self: center;
-
     }
   }
 
@@ -320,8 +443,6 @@ section {
     p {
       font-size: 1.3em;
     }
-
-
   }
   .row {
     margin: 5vh 0;
@@ -330,6 +451,7 @@ section {
     height: 100%;
     border: 0;
     background-color: transparent;
+    color: var(--font-color);
   }
   .card-icon-container {
     display: flex;
@@ -347,15 +469,13 @@ section {
       font-weight: bold;
     }
   }
-  
-  &+div>#aw-footer {
+
+  & + div > #aw-footer {
     margin: 0 10vw;
     @media (max-width: 800px) {
       margin: 0;
-      
     }
   }
-
 }
 
 div#aw-footer {
@@ -463,6 +583,14 @@ div#aw-footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+  .carousel-indicators {
+    margin-bottom: 0;
+  }
+  @media(prefers-color-scheme: light) {
+    .carousel-indicators/*, .carousel-indicators */ {
+      filter: invert(100%);
+    }
   }
 
   i {

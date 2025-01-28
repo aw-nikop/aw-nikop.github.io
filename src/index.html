@@ -46,7 +46,7 @@
     </main>
     <section>
         <div id="company-card" class="container card">
-            <div id="companyList" class="carousel slide carousel-dark" data-bs-ride="carousel">
+            <div id="companyList" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active">
                         <div class=" row justify-content-center align-items-center text-center ">
@@ -87,6 +87,9 @@
                         on-site to fix your networking issues</li>
                     <li> Choose between flexible
                         Basic and Premium Managed IT Plans that cater to businesses of all size</li>
+                    <li>
+                        As Microsoft Certified techs, we are experts in setting up and managing Office365 environments</li> 
+                    </li>
                 </ul>
             </div>
             <div>
@@ -99,7 +102,8 @@
                     <div class="row justify-content-center">
                         <div class="col">
                             <div class="form-floating mb-3">
-                                <input required type="string" class="form-control" id="name" name="name" placeholder="Name">
+                                <input required type="string" class="form-control" id="name" name="name"
+                                    placeholder="Name">
                                 <label for="name">Name<span class="text-danger"> *</span></label>
                             </div>
                         </div>
@@ -131,8 +135,8 @@
                     <div class="row justify-content-center">
                         <div class="col">
                             <div class="form-floating mb-3">
-                                <textarea required class="form-control" name="comments" placeholder="Leave a comment here"
-                                    id="comments"></textarea>
+                                <textarea required class="form-control" name="comments"
+                                    placeholder="Leave a comment here" id="comments"></textarea>
                                 <label for="comments">Comments</label>
                             </div>
                         </div>
@@ -154,7 +158,7 @@
 
         <div class="row row-cols-2 row-cols-md-4 g-4">
             <div class="col">
-                <a href="/docs/tech-support" role="button" class="card">
+                <a href="/solutions/tech-support" role="button" class="card">
                     <div class="card-icon-container">
                         <i class="bi bi-headset "></i>
                     </div>
@@ -164,7 +168,7 @@
                 </a>
             </div>
             <div class="col">
-                <a href="/docs/networking" role="button" class="card">
+                <a href="/solutions/networking" role="button" class="card">
                     <div class="card-icon-container">
                         <i class="bi bi-router-fill "></i>
                     </div>
@@ -174,7 +178,7 @@
                 </a>
             </div>
             <div class="col">
-                <a href="/docs/managed-it-plans" role="button" class="card">
+                <a href="/solutions/managed-it-plans" role="button" class="card">
                     <div class="card-icon-container">
                         <i class="bi bi-gear-wide-connected "></i>
                     </div>
@@ -184,7 +188,7 @@
                 </a>
             </div>
             <div class="col">
-                <a href="/docs/hybrid-cloud-migrations" role="button" class="card">
+                <a href="/solutions/hybrid-cloud-migrations" role="button" class="card">
                     <div class="card-icon-container">
                         <i class="bi bi-cloud-arrow-up-fill "></i>
                     </div>
@@ -194,9 +198,20 @@
                 </a>
             </div>
         </div>
+
         <div class="row row-cols-2 row-cols-md-4 g-4 mt-4">
             <div class="col">
-                <a href="/docs/firewall" role="button" class="card">
+                <a href="/solutions/automation" role="button" class="card">
+                    <div class="card-icon-container">
+                        <i class="bi bi-robot "></i>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Automation and Integration</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col">
+                <a href="/solutions/firewall" role="button" class="card">
                     <div class="card-icon-container">
                         <i class="bi bi-bricks"></i>
                     </div>
@@ -206,7 +221,7 @@
                 </a>
             </div>
             <div class="col">
-                <a href="/docs/cybersecurity" role="button" class="card">
+                <a href="/solutions/cybersecurity" role="button" class="card">
                     <div class="card-icon-container">
                         <i class="bi bi-person-fill-lock "></i>
                     </div>
@@ -216,7 +231,7 @@
                 </a>
             </div>
             <div class="col">
-                <a href="/docs/backup" role="button" class="card">
+                <a href="/solutions/backup" role="button" class="card">
                     <div class="card-icon-container">
                         <i class="bi bi-database-fill "></i>
                     </div>
@@ -225,16 +240,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col">
-                <a href="/docs/software" role="button" class="card">
-                    <div class="card-icon-container">
-                        <i class="bi bi-code "></i>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">Custom Software Solutions</p>
-                    </div>
-                </a>
-            </div>
+
         </div>
 
     </section>
@@ -266,12 +272,16 @@
     </section>
 
     <section id="meet-our-team">
+        <h2 class="display-6">Meet Our Team</h2>
         <div class="container-fluid">
             <div class="team-card">
                 <span>
-                    <div class="img-container">
-                        <img src="/chris1.jpg" class="img-fluid float-start" alt="Chris Profile Picture">
-                    </div>
+                    <a href="/team#chris">
+                        <div class="img-container">
+                            <img src="/chris1.jpg" class="img-fluid float-start" alt="Chris Profile Picture">
+                        </div>
+                    </a>
+
 
                     <h4>Chris</h4>
                     <p>
@@ -281,9 +291,11 @@
             </div>
             <div class="team-card">
                 <span>
-                    <div class="img-container">
-                        <img src="/blake1.jpg" class="img-fluid float-start" alt="Blake Profile Picture">
-                    </div>
+                    <a href="/team#blake">
+                        <div class="img-container">
+                            <img src="/blake1.jpg" class="img-fluid float-start" alt="Blake Profile Picture">
+                        </div>
+                    </a>
 
                     <h4>Blake</h4>
                     <p>
@@ -291,20 +303,22 @@
                     </p>
                 </span>
                 <span>
-                    <div class="img-container">
-                        <img src="/rex1.jpg" class="img-fluid float-start" alt="Rex Profile Picture">
-                    </div>
-
+                    <a href="/team#rex">
+                        <div class="img-container">
+                            <img src="/rex1.jpg" class="img-fluid float-start" alt="Rex Profile Picture">
+                        </div>
+                    </a>
                     <h4>Rex</h4>
                     <p>
                         Computer Technician
                     </p>
                 </span>
                 <span>
-                    <div class="img-container">
-                        <img src="/niko1.jpg" class="img-fluid float-start" alt="Niko Profile Picture">
-                    </div>
-
+                    <a href="team#niko">
+                        <div class="img-container">
+                            <img src="/niko1.jpg" class="img-fluid float-start" alt="Niko Profile Picture">
+                        </div>
+                    </a>
                     <h4>Niko</h4>
                     <p>
                         DevOps Engineer
@@ -321,7 +335,7 @@
             <h3 class="display-5">What our customers are saying about us</h3>
             <i class="trq bi bi-quote"></i>
 
-            <div id="testimonial" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-touch="true">
+            <div id="testimonial" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
                 <div class="carousel-indicators">
                     <button data-bs-target="#testimonial" data-bs-slide-to="0" class="active" aria-current="true"
                         aria-label="First slide"></button>
@@ -441,9 +455,9 @@
     </section>
 
     <!-- Optional: Place to the bottom of scripts -->
-     <section>
+    <section>
         {{>footer}}
-     </section>
+    </section>
 
 </body>
 
