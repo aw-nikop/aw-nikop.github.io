@@ -160,25 +160,20 @@
     ],
     "p2": "When it comes to protecting your business data, trust Alton Computer Solutions to deliver peace of mind through proactive backup and disaster recovery planning."
   },
-  "software": {
-    "title": "Custom Software Solutions",
+  "automation": {
+    "title": "Automation and Integration",
     "image": "",
     "p1": "We offer custom software solutions tailored to your business needs. Alton Computer Solutions specializes in developing software that streamlines your operations, enhances productivity, and provides a competitive edge in the market.",
     "features": [
       {
         "image": "bi-shuffle",
-        "title": "Streamline Efficiency",
-        "content": "We create custom software to automate repetitive tasks and improve workflow efficiency."
+        "title": "Automation",
+        "content": "We use scripts, Power Automate and custom programs to automate repetitive, time-consuming tasks."
       },
       {
         "image": "bi-stack",
         "title": "Integrate",
         "content": "Integrate different workflows, sites, and systems to create a seamless business environment."
-      },
-      {
-        "image": "bi-browser-chrome",
-        "title": "Web development",
-        "content": "We design and develop websites that are user-friendly, responsive, and visually appealing."
       }
     ],
     "p2": "Alton Computer Solutions is your go-to partner for custom software solutions that drive business growth and success."
