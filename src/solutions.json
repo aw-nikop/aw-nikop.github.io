@@ -1,7 +1,6 @@
 {
   "tech-support": {
     "title": "Tech Support",
-    "image": "https://www.altoncomputersolutions.com/wp-content/uploads/2021/07/solutions-details2.png?id=2382",
     "p1": "At Alton Computer Solutions, we believe in providing good old-fashioned tech support. Whether you need help on-site, remotely, or over the phone, our team is ready to assist. We are here, in your community, providing boots-on-the-ground support whenever you need it.",
     "features": [
       {
@@ -24,7 +23,6 @@
   },
   "networking": {
     "title": "Networking",
-    "image": "https://www.altoncomputersolutions.com/wp-content/uploads/2019/02/blur-computer-connection-222.jpg?id=2165",
     "p1": "Need networking support? Alton Computer Solutions provides a comprehensive range of networking services designed to ensure your business stays connected and efficient. Unlike many IT service providers, we are here, locally present, and ready to come on-site to fix your networking issues. We’re not just some remotely located company—we’re your local IT partner, offering real-time support when you need it most.",
     "features": [
       {
@@ -47,8 +45,7 @@
   },
   "managed-it-plans": {
     "title": "Managed IT Plans",
-    "image": "https://www.altoncomputersolutions.com/wp-content/uploads/2021/07/small-1.png?id=2335",
-    "p1": "Managing IT infrastructure is crucial for business success. Alton Computer Solutions offers flexible Basic and Premium Managed IT Plans that cater to businesses of all sizes. As your local IT partner, we’re here to provide on-site support when needed, ensuring your systems are always in top shape.",
+       "p1": "Managing IT infrastructure is crucial for business success. Alton Computer Solutions offers flexible Basic and Premium Managed IT Plans that cater to businesses of all sizes. As your local IT partner, we’re here to provide on-site support when needed, ensuring your systems are always in top shape.",
     "features": [
       {
         "image": "bi-pc-display",
@@ -70,8 +67,7 @@
   },
   "hybrid-cloud-migrations": {
     "title": "Hybrid Cloud Migrations",
-    "image": "https://www.altoncomputersolutions.com/wp-content/uploads/2021/07/cloud-1.png?id=2329",
-    "p1": "Many businesses require a mix of on-premises and cloud solutions. Alton Computer Solutions specializes in setting up and maintaining hybrid cloud environments, integrating on-site servers with cloud systems for optimal performance and security.",
+       "p1": "Many businesses require a mix of on-premises and cloud solutions. Alton Computer Solutions specializes in setting up and maintaining hybrid cloud environments, integrating on-site servers with cloud systems for optimal performance and security.",
     "features": [
       {
         "image": "bi-hdd-rack",
@@ -93,8 +89,7 @@
   },
   "firewall": {
     "title": "Firewalls with VPN",
-    "image": "https://www.altoncomputersolutions.com/wp-content/uploads/2021/07/VPn.jpg?id=2425",
-    "p1": "Protecting your business from cyber threats is essential, and our firewall solutions are designed to provide robust security. Alton Computer Solutions is here to recommend, implement, and maintain firewalls that best suit your business needs and internet speeds.",
+      "p1": "Protecting your business from cyber threats is essential, and our firewall solutions are designed to provide robust security. Alton Computer Solutions is here to recommend, implement, and maintain firewalls that best suit your business needs and internet speeds.",
     "features": [
       {
         "image": "bi-shield-lock",
@@ -116,8 +111,7 @@
   },
   "cybersecurity": {
     "title": "Cybersecurity and Compliance",
-    "image": "https://www.altoncomputersolutions.com/wp-content/uploads/2021/07/young-man-engineer-making-program-analyses-1.jpg?id=2428",
-    "p1": "Cybersecurity is more critical than ever. Alton Computer Solutions helps businesses identify and address security vulnerabilities. Unlike remote-only providers, we are locally present and ready to provide on-site support for implementing robust security measures.",
+     "p1": "Cybersecurity is more critical than ever. Alton Computer Solutions helps businesses identify and address security vulnerabilities. Unlike remote-only providers, we are locally present and ready to provide on-site support for implementing robust security measures.",
     "features": [
       {
         "image": "bi-clipboard-check",
@@ -139,8 +133,7 @@
   },
   "backup": {
     "title": "Backup and Disaster Recovery Plans",
-    "image": "https://www.altoncomputersolutions.com/wp-content/uploads/2021/07/Financ.jpg?id=2424",
-    "p1": "Data loss can cripple a business. At Alton Computer Solutions, we provide fully managed backup and disaster recovery solutions to protect your critical data. With our local presence, we ensure hands-on support to keep your backups healthy and reliable.",
+     "p1": "Data loss can cripple a business. At Alton Computer Solutions, we provide fully managed backup and disaster recovery solutions to protect your critical data. With our local presence, we ensure hands-on support to keep your backups healthy and reliable.",
     "features": [
       {
         "image": "bi-shield-shaded",
@@ -162,8 +155,7 @@
   },
   "automation": {
     "title": "Automation and Integration",
-    "image": "",
-    "p1": "We offer custom software solutions tailored to your business needs. Alton Computer Solutions specializes in developing software that streamlines your operations, enhances productivity, and provides a competitive edge in the market.",
+     "p1": "We offer custom software solutions tailored to your business needs. Alton Computer Solutions specializes in developing software that streamlines your operations, enhances productivity, and provides a competitive edge in the market.",
     "features": [
       {
         "image": "bi-shuffle",

@@ -54,6 +54,7 @@ export default {
       input: {
         main: resolve(__dirname, "src", "index.html"),
         ...getDirFiles("solutions"),
+        ...getDirFiles("altons-articles"),
         data: resolve(__dirname, "src", "public/solutions.json"),
         navbar: resolve(__dirname, "src", "partials/navbar.html"),
         footer: resolve(__dirname, "src", "partials/footer.html"),

@@ -9,14 +9,10 @@ fetch("/solutions.json")
   .then((response) => response.json())
   .then((data) => {
     const url = window.location.href.split("#")[0];
-    console.log(url)
     const lastPart = getLastUrlPart(url);
     const template = Handlebars.compile(t);
     const html = template(data[lastPart]);
     document.getElementById("solutions-body").innerHTML = html;
-    document.getElementById(
-      "hero"
-    ).style.backgroundImage = `url(${data[lastPart].image})`;
   })
   .catch((error) => {
     console.error("Error:", error);

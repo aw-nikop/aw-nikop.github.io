@@ -77,6 +77,14 @@
   }
   .accordion-item > .accordion-body {
     text-align: left;
+    padding: 0;
+
+    > a {
+      padding: var(--bs-accordion-body-padding-y)
+        var(--bs-accordion-body-padding-x);
+      width: 100%;
+      display: block;
+    }
   }
 }
 
@@ -147,7 +155,7 @@ div#aw-footer {
 
 .modal {
   --bs-modal-border-color: none;
-  
+
   .modal-body,
   .modal-header {
     color: var(--font-color);
@@ -179,6 +187,16 @@ div#aw-footer {
         color: var(--font-color) !important;
         background-color: transparent !important;
       }
+    }
+    #mc_embed_signup {
+      width: auto;
+      background-color: var(--main-bg);
+      color: var(--font-color);
+      font: inherit;
+    }
+
+    #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+      background-color: transparent;
     }
   }
 }

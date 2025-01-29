@@ -3,9 +3,11 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 @import "./partials/partial.scss";
 @import "./solutions/solutions.scss";
+@import "./altons-articles/articles.scss";
 :root {
   --aw-orange: #d06108;
   --aw-orange-light: #8b410491;
+  --aw-orange-lighter: #8b410438;
   --alternate-bg: #f5f6f7;
   --main-bg: white;
   --font-color: black;
@@ -163,6 +165,7 @@ body {
 }
 
 section {
+  scroll-margin-top: 11vh;
   &:not(:last-of-type) {
     padding: 7vh 10vw;
   }
@@ -172,7 +175,7 @@ section {
   }
   color: var(--font-color);
   &#about-us {
-    scroll-margin-top: 11vh;
+    
     > div.container-fluid {
       display: flex;
       flex-direction: row;
@@ -257,6 +260,7 @@ section {
     font-size: 1.1rem;
   }
   .card {
+    scroll-margin-top: 15vh;
     background-color: var(--alternate-bg);
     color: var(--font-color);
     border: 0;
@@ -288,6 +292,7 @@ section {
   }
 
   img {
+    
     width: 200px;
   }
 }
