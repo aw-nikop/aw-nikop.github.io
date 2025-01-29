@@ -25,7 +25,7 @@
   "networking": {
     "title": "Networking",
     "image": "https://www.altoncomputersolutions.com/wp-content/uploads/2019/02/blur-computer-connection-222.jpg?id=2165",
-    "p1": "Need networking support? Alton Computer Solutions provides a comprehensive range of networking services designed to ensure your business stays connected and efficient. Unlike many IT service providers, we are here, locally present, and ready to come on-site to fix your networking issues. We’re not just some remotely located company—we’re your local IT partner, offering real-time support when you need it most.",
+    "p1": "Need networking support? Alton Computer Solutions provides a comprehensive range of networking services designed to ensure your business stays connected and efficient. Unlike many IT service providers, we are here, locally present, and ready to come on-site to fix your networking issues. ",
     "features": [
       {
         "image": "bi-wrench",
@@ -117,7 +117,7 @@
   "cybersecurity": {
     "title": "Cybersecurity and Compliance",
     "image": "https://www.altoncomputersolutions.com/wp-content/uploads/2021/07/young-man-engineer-making-program-analyses-1.jpg?id=2428",
-    "p1": "Cybersecurity is more critical than ever. Alton Computer Solutions helps businesses identify and address security vulnerabilities. Unlike remote-only providers, we are locally present and ready to provide on-site support for implementing robust security measures.",
+    "p1": "Cybersecurity is more critical than ever. Alton Computer Solutions helps businesses identify and address security vulnerabilities.",
     "features": [
       {
         "image": "bi-clipboard-check",
