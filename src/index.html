@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <style type="text/css">
         #mc_embed_signup {
             background: #fff;
@@ -25,8 +26,15 @@
     {{> navbar}}
 
 
-    <script type="module" src="./main.js"></script>
+    <script type="module" src="./main.js">
+    </script>
+    <script>
+        function onSubmit(token) {
+            document.getElementById("token").value = token;
+            document.getElementById("form").dispatchEvent(new Event('submit'));
+        }
 
+    </script>
     <main>
         <div id="main-body">
             <div class="container text-center">
@@ -109,8 +117,7 @@
                 <p>
                     Drop us an email with a request and we will get back to you as soon as we can
                 </p>
-                <form action="https://api.web3forms.com/submit" method="POST" id="form" autocomplete="off">
-                    <input type="hidden" name="access_key" value="e1155a87-b273-4e52-8aa5-3e44e8ae368e">
+                <form id="form" autocomplete="off">
                     <div class="row justify-content-center">
                         <div class="col">
                             <div class="form-floating mb-3">
@@ -153,10 +160,12 @@
                             </div>
                         </div>
                     </div>
-                    <input type="hidden" name="redirect" value="/thank-you">
+                    <input type="hidden" name="token" value="" id="token">
                     <div class="row justify-content-center">
                         <div class="col">
-                            <button type="submit" class="btn orange-btn">Submit</button>
+                            <button class="btn orange-btn g-recaptcha"
+                                data-sitekey="6LcLMMcqAAAAAEUVy6-CB3sjPMo5tVsateaTm1tg" data-callback='onSubmit'
+                                data-action='submit'>Submit</button>
                         </div>
                     </div>
                 </form>

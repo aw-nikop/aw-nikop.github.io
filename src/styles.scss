@@ -125,7 +125,7 @@ body {
   border-radius: 45px;
   z-index: 3;
 
-  background-color: var(--main-bg);
+  background-color: var(--alternate-bg);
   @media (prefers-color-scheme: light) {
     .carousel-control-next,
     .carousel-control-prev /*, .carousel-indicators */ {
@@ -200,10 +200,10 @@ section {
     }
   }
 
-  &:nth-child(even) {
+  &:nth-of-type(odd) {
     background-color: var(--alternate-bg);
   }
-  &:nth-child(odd) {
+  &:nth-of-type(even) {
     background-color: var(--main-bg);
   }
 }
@@ -352,6 +352,13 @@ section {
   }
   #form {
     color: black !important;
+    h2 {
+      color: white;
+    }
+
+    .spinner-border {
+      color: var(--aw-orange);
+    }
   }
 }
 
@@ -360,7 +367,7 @@ section {
     border: 0;
     border-radius: 15px;
     transition: 0.3s;
-    background-color: var(--main-bg);
+    background-color: var(--alternate-bg);
     color: var(--font-color);
     .card-text {
       text-align: center;
@@ -377,7 +384,7 @@ section {
   }
 
   .card:hover {
-    background-color: var(--alternate-bg);
+    background-color: var(--main-bg);
   }
 }
 
