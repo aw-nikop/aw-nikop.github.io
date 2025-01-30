@@ -2,7 +2,7 @@
   "tech-support": {
     "title": "Tech Support",
     "image": "https://www.altoncomputersolutions.com/wp-content/uploads/2021/07/solutions-details2.png?id=2382",
-    "p1": "At Alton Computer Solutions, we believe in providing good old-fashioned tech support. Whether you need help on-site, remotely, or over the phone, our team is ready to assist. We are here, in your community, providing boots-on-the-ground support whenever you need it.",
+    "p1": "At Alton Computer Solutions our team is ready to assist your business, providing experienced tech support, on-site, remote or over the phone.",
     "features": [
       {
         "image": "bi-wrench",
@@ -25,7 +25,7 @@
   "networking": {
     "title": "Networking",
     "image": "https://www.altoncomputersolutions.com/wp-content/uploads/2019/02/blur-computer-connection-222.jpg?id=2165",
-    "p1": "Need networking support? Alton Computer Solutions provides a comprehensive range of networking services designed to ensure your business stays connected and efficient. Unlike many IT service providers, we are here, locally present, and ready to come on-site to fix your networking issues. ",
+    "p1": "Need networking support? Alton Computer Solutions provides a range of networking hardware and support to ensure your business stays connected and efficient.",
     "features": [
       {
         "image": "bi-wrench",
@@ -48,21 +48,21 @@
   "managed-it-plans": {
     "title": "Managed IT Plans",
     "image": "https://www.altoncomputersolutions.com/wp-content/uploads/2021/07/small-1.png?id=2335",
-    "p1": "Managing IT infrastructure is crucial for business success. Alton Computer Solutions offers flexible Basic and Premium Managed IT Plans that cater to businesses of all sizes. As your local IT partner, we’re here to provide on-site support when needed, ensuring your systems are always in top shape.",
+    "p1": "Alton Computer Solutions offers  Basic and Premium Managed IT Plans that cater to businesses of all sizes. As your local IT partner, we’re here to provide on-site support when needed, ensuring your systems are always in top shape.",
     "features": [
       {
         "image": "bi-pc-display",
-        "title": "Workstation and Server Management",
+        "title": "Workstation and Server Plans",
         "content": "We provide monitoring, maintenance, and security for your devices."
       },
       {
         "image": "bi-cloud-arrow-up",
-        "title": "Cloud Services Integration",
+        "title": "Cloud Services Plans",
         "content": "Our plans include Microsoft 365 services to optimize collaboration and productivity."
       },
       {
         "image": "bi-person-gear",
-        "title": "Network and Cloud Management",
+        "title": "Network and Cloud Management Plans",
         "content": "We handle the management of your routers, firewalls, and Wi-Fi systems, so you can focus on your business."
       }
     ],
