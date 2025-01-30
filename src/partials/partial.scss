@@ -145,7 +145,20 @@ div#aw-footer {
 
   ul {
     list-style-type: none;
+    padding-left: 0;
+    &#small-connect {
+      li {
+        display: flex;
+        >:first-child {
+          margin-right: 10px;
+          justify-self: center;
+          align-self: center;
+        }
+      }
+    }
   }
+
+  
 
   a {
     text-decoration: none;

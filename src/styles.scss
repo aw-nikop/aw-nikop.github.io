@@ -367,7 +367,7 @@ section {
     border: 0;
     border-radius: 15px;
     transition: 0.3s;
-    background-color: var(--alternate-bg);
+    background-color: var(--main-bg);
     color: var(--font-color);
     .card-text {
       text-align: center;
@@ -384,7 +384,7 @@ section {
   }
 
   .card:hover {
-    background-color: var(--main-bg);
+    background-color: var(--alternate-bg);
   }
 }
 
