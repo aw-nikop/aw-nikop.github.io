@@ -60,6 +60,7 @@ export default {
         footer: resolve(__dirname, "src", "partials/footer.html"),
         team: resolve(__dirname, "src", "team.html"),
         "thank-you": resolve(__dirname, "src", "thank-you.html"),
+        "cname": resolve(__dirname, "src", "CNAME"),
       },
     },
   },
