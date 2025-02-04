@@ -151,76 +151,50 @@
       </div>
     </div>    <section id="article-body">
         <script>
-            document.title = "Holiday e-Commerce Tips For Small Businesses | Altonworks";
+            document.title = "Automating Daily Tasks | Altonworks";
         </script>
-        <h1 class="display-5">Preparing Your Small Business for e-Commerce During the Holidays<br> <small class="text-muted">By
-                Chris
-                Alton</small></h1>
-        <p>Is your e-Commerce all it can be for the holiday shopping season? According to Deloitte’s annual holiday forecasts,
-            ecommerce sales are predicted to be as high as $149 billion during the holiday period, which it defines as November
-            through January. This would be up from $126.4 billion spent online in 2018, according to Deloitte’s estimates. If
-            you are looking to increase your e-Commerce sales this holiday season, here are a few tips:</p>
-        
-        <h2 class="section">Make Sure Your Small Business is Prepared for Major Shopping Holidays</h2>
-        <p>In addition to being prepared for Black Friday, you should now be ready and prepared for brisk business on Small
-            Business Saturday—a day to encourage people to shop locally as they kick off the holiday season; Cyber Monday—a day
-            promoted by retailers as offering exceptional bargains; and even Cyber Week—the heavy shopping period from the
-            Tuesday before Thanksgiving until Cyber Monday. Some lesser-known days to keep on your radar are Giving Tuesday,
-            Green Monday, and Free Shipping Day, which you could highlight if you are offering free shipping that day.</p>
-        
-        <h3>Here is a list detailing the schedule:</h3>
-        <ul>
-            <li><strong>Small Business Saturday</strong> - the Saturday after Thanksgiving</li>
-            <li><strong>Cyber Monday</strong> - the Monday after Thanksgiving</li>
-            <li><strong>Cyber Week</strong> - the entire week after Thanksgiving</li>
-            <li><strong>Giving Tuesday</strong> - the Tuesday after Thanksgiving</li>
-            <li><strong>Green Monday</strong> - the second Monday in December</li>
-            <li><strong>Free Shipping Day</strong> - in 2019 will be on December 14th</li>
-        </ul>
-        
-        <h2 class="section">Optimize Your Website for Mobile eCommerce Activity</h2>
-        <p>More than 230 million US consumers own a smartphone. That means it’s more likely than ever that your customer reaches
-            your eCommerce site from a smartphone or tablet than from a desktop computer. Research indicates that 79% of
-            smartphone users have made a purchase online using their mobile device in the last 6 months, and almost 40% of all
-            eCommerce purchases during the 2018 holiday season were made on a smartphone. If your site isn’t optimized to offer
-            the best mobile experience, your customers will miss out on important sales.</p>
-        
-        <h3>Here are some tips for optimizing your mobile experience:</h3>
-        <ul>
-            <li>Make sure your website is responsive. A responsive design using flexible layouts means your webpage will adapt
-                to different devices so your webpage will look great on any size screen.</li>
-            <li>Buttons and links should be easy to click and there should be plenty of spacing between different clickable
-                options. Trying to hit a tiny “buy now” button on a small screen is frustrating, especially when there are other
-                links or buttons positioned too close together that may be inadvertently selected.</li>
-            <li>Ensure that all phone numbers on your site are clickable so users can simply tap them to contact you.</li>
-        </ul>
-        
-        <h2 class="section">Simplify Your eCommerce Checkout Process</h2>
-        <p>Streamline your checkout process. Recent data suggests that cart abandonment during checkout happens about 69% of the
-            time. If you want to be among the 1/3 of retailers who are closing the online sale, your checkout process needs to
-            be as simple as possible. Ways to make this process the best that it can be are:</p>
-        
-        <ul>
-            <li>Don’t ask for the same information more than once. If you have already obtained a shipping address, don’t ask
-                for it again. Shoppers lose interest if you ask for them to repeat their information or waste their time.</li>
-            <li>Have a one-page checkout process where paying is easy. If you can keep the entire checkout process to one page
-                and offer easy payment options such as ApplePay, PayPal, and Google Wallet, customers are less likely to get
-                frustrated and abandon their purchase.</li>
-            <li>Remove unnecessary distractions. The checkout page is not the time for pop-up ads, or extra banners, etc.</li>
-        </ul>
-        
-        <h2 class="section">Pay Attention to How Voice Search Impacts eCommerce</h2>
-        <p>A simple step to take in optimizing your SEO strategy is to try to predict how consumers will ask questions and use
-            the information to create your content and meta data. Instead of keywords shift towards answering questions—such as
-            “What are the best Black Friday deals on laptops?” instead of “Best Black Friday deals on laptops.”</p>
-        
-        <h2 class="section">Look for Ways to Offer More eCommerce Perks Than Your Small Business Competitors</h2>
-        <p>Are there areas where your company could go above and beyond what is expected? Could you offer free delivery, or
-            expedited shipping? Could you create a how-to video on YouTube to walk your consumers through setting up or
-            installing one of your products once it arrives? Could you add more photos or customer comments to your site to
-            better illustrate your amazing products? Find ways to stand out from your completion to surprise and delight your
-            customers. Consistently offering great service will help you create loyal consumers who sing your praises to their
-            network and return to buy from you again.</p>
+        <h1 class="display-5">How Alton Computer Solutions Automated Daily, Tedious Tasks<br>
+            <small class="text-muted">By Niko Permilovsky</small>
+        </h1>
+        <p>We all have repetitive computing tasks that we dread. Maybe it is invoicing, patient intake forms, copy/pasting
+            excel
+            rows from one sheet to another, or updating inventory. It’s not a perplexing task, it’s just tiresome. You can’t
+            help but wonder, “isn’t there a way to make this go faster?”</p>
+        <p>Well, there is!</p>
+        <p>Here is how we reduced a daily backup check-and-verify task from 30 minutes to instantaneous using Power Automate
+            and
+            a custom website we created.</p>
+        <p>As part of the <a href="/solutions/backup">Backup and Disaster Recovery Plan</a> we monitor our customer’s backups to
+            check if successful; and if
+            something went wrong, such as a network error, we investigate and fix it.</p>
+        <p>The process of checking all the reports from the backup devices sent to our Outlook email is time consuming. The
+            reports come in detailing workstation, server, and cloud backups. There isn’t a nice, clean, and centralized
+            dashboard where all the reports go to.</p>
+        <h2 class="section">Part 1: Power Automate</h2>
+        <p>We automated the manual email backup checking process to save time and eliminate human error. There are three
+            constants: The “deadline” all the reports came in by, a clear distinction between success and failure, and the
+            general format that the message has. All the reports come in by 8:30, which is when our process starts.</p>
+        <p>Using Power Automate through Microsoft 365 we integrated all the backup emails very neatly. We created a daily
+            task
+            that gathers the emails into one bucket. It then loops through them one by one and sorts them into smaller
+            buckets,
+            depending on the backup type – whether workstation, server, or cloud. From there we save it all to the server
+            and
+            delete the email from the mailbox to save space.</p>
+        <h2 class="section">Part 2: Parsing</h2>
+        <p>Next, we need to parse the emails so we can display them in a clean, human-readable report. Parsing emails is
+            straightforward: take the title, the device name, the date, and the description, and convert it into a row. We
+            gather all the rows into one table and send it to the webserver.</p>
+        <h2 class="section">Part 3: Displaying The Report – the user-friendly results</h2>
+        <p>The last part is displaying the results back so they can be accessible to all of Altonworks’ employees. We can do
+            this by running a webserver on a Virtual Machine. Every morning, the report is ready first thing by clicking on
+            a bookmarked link in a web browser. It contains all the backup reports for each of our customers in a simple, easy
+            to read format. We can even set it to print every morning!</p>
+        <h2>If you are interested in finding a solution that streamlines tasks and frees up time, <a target="_blank"
+                href="https://outlook.office365.com/book/AltonworksConsultation@altonworks.com/">contact us now to schedule
+                a
+                meeting.</a>
+        </h2>
     </section>
     <section>
         <div class="container-fluid">
