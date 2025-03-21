@@ -1,7 +1,6 @@
 #main-navbar {
   background-color: var(--main-bg);
   max-width: 100%;
-  border-bottom: 2px solid var(--alternate-bg);
 
   .ac-button {
     background-color: inherit;
@@ -96,7 +95,7 @@
 }
 
 .phone {
-  color: #d06108 !important;
+  color: var(--aw-orange) !important;
 }
 
 .vr {

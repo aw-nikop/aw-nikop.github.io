@@ -5,9 +5,9 @@
 @import "./solutions/solutions.scss";
 @import "./altons-articles/articles.scss";
 :root {
-  --aw-orange: #d06108;
-  --aw-orange-light: #8b410491;
-  --aw-orange-lighter: #8b410438;
+  --aw-orange: #f16243;
+  --aw-orange-light: #f16343b4;
+  --aw-orange-lighter: #f1634360;
   --alternate-bg: #f5f6f7;
   --main-bg: white;
   --font-color: black;
@@ -50,7 +50,7 @@ body {
 }
 
 .orange-btn {
-  background-color: #d06108;
+  background-color: var(--aw-orange);
   color: white !important;
   > a {
     color: white !important;
@@ -58,7 +58,7 @@ body {
   }
 
   &:hover {
-    background-color: #af5105;
+    background-color: var(--aw-orange-lighter);
   }
 }
 
@@ -76,13 +76,13 @@ body {
 
 .inverse-orange-btn {
   background-color: white;
-  color: #d06108;
+  color: var(--aw-orange);
   a {
-    color: #d06108 !important;
+    color: var(--aw-orange) !important;
   }
   &:hover {
     background-color: #f5f5f5;
-    color: #d06108 !important;
+    color: var(--aw-orange) !important;
   }
 }
 
@@ -93,29 +93,65 @@ body {
 }
 
 #main-body {
-  background-image: url("/front_page_bg.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  
   position: relative;
-  min-height: 50vh;
-
-  h1 {
-    font-weight: bold;
-    background: -webkit-linear-gradient(#fff, #cad7da);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  h2 {
-    color: white;
-    font-weight: light;
-  }
+  min-height: 90vh;
 
   > div.container {
     padding-top: 5rem;
     padding-bottom: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 800px) {
+      flex-direction: column;
+    }
+    .main-title {
+      font-size: 5rem;
+    }
+    .main-subtitle {
+      font-size: 2rem;
+      color: var(--aw-orange-light);
+    }
+
+    h1 {
+      font-weight: bolder;
+      color: var(--aw-orange);
+      text-align: left;
+    }
+
+    h2 {
+      color: white;
+      font-weight: light;
+    }
+
+    .img-container {
+      width: 50%;
+    }
+  }
+
+  .bouncing-arrow {
+    text-align: center;
+    margin-top: 20px;
+    animation: bounce 2s infinite;
+    i {
+      font-size: 2rem;
+    }
+    a {
+      color: var(--aw-orange);
+    }
+    @keyframes bounce {
+      100% {
+        transform: translateY(-10px);
+      }
+      50% {
+        transform: translateY(0);
+      }
+      0% {
+        transform: translateY(-10px);
+      }
+    }
   }
 }
 
@@ -175,7 +211,6 @@ section {
   }
   color: var(--font-color);
   &#about-us {
-    
     > div.container-fluid {
       display: flex;
       flex-direction: row;
@@ -228,11 +263,9 @@ section {
 
       border-bottom: 5px solid var(--aw-orange);
       &:hover {
-        
         .col-body {
           opacity: 1;
           transition: 0.5s;
-
         }
         .col-title {
           opacity: 0;
@@ -249,7 +282,7 @@ section {
       .col-body {
         justify-self: center;
         align-self: center;
-        font-size:1.2em;
+        font-size: 1.2em;
         opacity: 0;
       }
     }
@@ -291,9 +324,7 @@ section {
     }
   }
 
-
   img {
-    
     width: 200px;
   }
 }
@@ -416,9 +447,8 @@ section {
     }
   }
 
-  
   #chris-photo {
-    transform: translateY(25px)
+    transform: translateY(25px);
   }
 
   > div {
@@ -510,5 +540,32 @@ section {
   }
   @media (max-width: 800px) {
     font-size: 1rem;
+  }
+}
+
+.container404 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  h1 {
+    font-size: 5rem;
+    font-weight: bold;
+  }
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  a {
+    color: var(--aw-orange);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+    &:hover {
+      border-color: var(--aw-orange);
+    }
   }
 }

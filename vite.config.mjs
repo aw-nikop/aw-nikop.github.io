@@ -3,8 +3,11 @@ import { fileURLToPath } from "node:url";
 import { defineConfig } from "vite";
 import inject from "@rollup/plugin-inject";
 import handlebars from "vite-plugin-handlebars";
+import Sitemap from 'vite-plugin-sitemap'
+
 
 import { readdirSync } from "node:fs";
+import { FALSE } from "sass";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const SCSS_Logger = {
@@ -38,6 +41,7 @@ export default {
     handlebars({
       partialDirectory: resolve(__dirname, "src", "partials"),
     }),
+    Sitemap({ hostname: "https://altoncomputersolutions.com", generateRobotsTxt: false })
   ],
   root: resolve(__dirname, "src"),
   resolve: {
