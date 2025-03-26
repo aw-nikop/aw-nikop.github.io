@@ -116,6 +116,13 @@ div#aw-footer {
   > div {
     display: flex;
     flex-direction: column;
+    li {
+      margin: 10px 0;
+      a:hover {
+        color: var(--aw-orange);
+        transition: 0.2s ease-out;
+      }
+    }
     &:first-child {
       justify-content: space-between;
       i {
@@ -128,7 +135,7 @@ div#aw-footer {
     &:last-child {
       flex-basis: 20%;
     }
-    margin: 10px;
+    margin: 20px;
   }
 
   > div.row {
