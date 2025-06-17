@@ -8,8 +8,8 @@
   --aw-orange: #f16243;
   --aw-orange-light: #f16343b4;
   --aw-orange-lighter: #f1634360;
-  --alternate-bg: #f5f6f7;
-  --main-bg: white;
+  --alternate-bg: #e2e2e2;
+  --main-bg: rgb(255, 255, 255);
   --font-color: black;
   color: black;
 
@@ -24,63 +24,61 @@
     font-weight: 100;
     font-style: normal;
   }
-  
+
   .lato-light {
     font-family: "Lato", sans-serif;
     font-weight: 300;
     font-style: normal;
   }
-  
+
   .lato-regular {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     font-style: normal;
   }
-  
+
   .lato-bold {
     font-family: "Lato", sans-serif;
     font-weight: 700;
     font-style: normal;
   }
-  
+
   .lato-black {
     font-family: "Lato", sans-serif;
     font-weight: 900;
     font-style: normal;
   }
-  
+
   .lato-thin-italic {
     font-family: "Lato", sans-serif;
     font-weight: 100;
     font-style: italic;
   }
-  
+
   .lato-light-italic {
     font-family: "Lato", sans-serif;
     font-weight: 300;
     font-style: italic;
   }
-  
+
   .lato-regular-italic {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     font-style: italic;
   }
-  
+
   .lato-bold-italic {
     font-family: "Lato", sans-serif;
     font-weight: 700;
     font-style: italic;
   }
-  
+
   .lato-black-italic {
     font-family: "Lato", sans-serif;
     font-weight: 900;
     font-style: italic;
   }
-  
 }
-
 
 body {
   font-family: "Lato", sans-serif;
@@ -134,7 +132,6 @@ body {
 }
 
 #main-body {
-  
   position: relative;
   min-height: 90vh;
 
@@ -147,31 +144,59 @@ body {
     justify-content: space-between;
     @media (max-width: 800px) {
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
     .main-title {
       font-size: 5rem;
-      @media (max-width: 800px) {
+      @media (max-width: 500px) {
         font-size: 3rem;
+      }
+      @media (prefers-color-scheme: light) {
+        color: black;
       }
     }
     .main-subtitle {
       font-size: 2rem;
       color: var(--aw-orange-light);
+      @media (prefers-color-scheme: light) {
+        color: black;
+      }
+      @media (max-width: 500px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    .img-container {
+      width: 50%;
+      @media (max-width: 800px) {
+        width: 100%;
+      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    img.img-main {
+      width: 100%;
+      margin-left: auto;
+      @media (max-width: 800px) {
+        width: 100%;
+      }
     }
 
     h1 {
       font-weight: bolder;
       color: var(--aw-orange);
       text-align: left;
+
+      @media (max-width: 500px) {
+        text-align: center;
+      }
     }
 
     h2 {
       color: white;
       font-weight: light;
-    }
-
-    .img-container {
-      width: 50%;
     }
   }
 
