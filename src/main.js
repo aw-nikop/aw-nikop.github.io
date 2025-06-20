@@ -5,17 +5,6 @@ import * as bootstrap from 'bootstrap'
 import ls from 'localstorage-slim';
 
 window.addEventListener('DOMContentLoaded', (event) => {
-    const m = new bootstrap.Modal(
-        document.getElementById("signupModal"),
-    );
-
-    if (ls.get("form_shown") === null) {
-
-        setTimeout(() => {
-            m.show();
-            ls.set("form_shown", true, { ttl: 60 * 60 * 24 * 7 });
-        }, 1000 * 20 * 1);
-    }
 
     var canvas = document.getElementById("offcanvasNav");
     var bscanvas = new bootstrap.Offcanvas(canvas);
@@ -42,12 +31,38 @@ window.addEventListener('DOMContentLoaded', (event) => {
             },
             body: JSON.stringify(j_data)
         }).then((res) => {
-            if (res.ok) {
                 document.getElementById("form").innerHTML = "<h2>Message Sent!</h2>";
-            } else {
-                document.getElementById("form").innerHTML = "<h2>Something went wrong. <a href='mailto:support@altonworks.com'>Click Here</a> to send an email manually.</h2>";
-            }
+            
         });
     });
+    var data = ['Small Business', 'Law Firm', 'Non-profit', 'Construction', 'Aerospace', 'Healthcare', 'Finance', 'Engineering'];
+    var counter = 0;
+    function typeWriter() {
+        var i = 0;
+        var txt = data[counter];
+        counter++;
+        if (counter >= data.length) {
+            counter = 0;
+        }
+        var speed = 100; // The speed/duration of the effect in milliseconds
+        var element = document.getElementById("type-writer");
+        element.innerHTML = "";
+        
+        function type() {
+            if (i < txt.length) {
+                element.innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(type, speed);
+            }
+        }
+
+
+        type();
+    }
+    typeWriter();
+    setInterval(typeWriter, 5000);
 });
+
+
+
 
