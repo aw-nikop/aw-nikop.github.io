@@ -112,7 +112,6 @@ body {
   font-weight: bold;
   width: 200px;
   text-align: center;
-  margin: 10px 20px;
 }
 
 .inverse-orange-btn {
@@ -149,6 +148,18 @@ body {
     @media (max-width: 800px) {
       flex-direction: column;
     }
+
+    .main-title-container {
+      width: 50%;
+      @media (max-width: 800px) {
+        width: 100%;
+        text-align: center;
+      }
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
     .main-title {
       font-size: 5rem;
       @media (max-width: 800px) {
@@ -160,21 +171,19 @@ body {
       color: var(--aw-orange-light);
 
       #type-writer {
-        overflow: hidden;
-        white-space: nowrap;
-        border-right: 0.15em solid var(--aw-orange);
-        width: 0;
-        margin: 0 auto;
-        animation: blink-caret 0.75s step-end infinite;
-        @keyframes blink-caret {
-          from,
-          to {
-            border-color: transparent;
-          }
-          50% {
-            border-color: var(--aw-orange);
+        &.fade-in {
+          animation: fade-in 0.5s ease-in-out;
+          animation-fill-mode: forwards;
+          @keyframes fade-in {
+            from { opacity: 0;}
+            to { opacity: 1; }
           }
         }
+        overflow: hidden;
+        white-space: nowrap;
+        width: 0;
+        margin: 0 auto;
+        
       }
     }
 
@@ -191,6 +200,8 @@ body {
 
     .img-container {
       width: 50%;
+      justify-content: center;
+      align-items: center;
     }
   }
 

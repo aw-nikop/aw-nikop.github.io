@@ -38,33 +38,62 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
     var data = ['Small Business', 'Law Firm', 'Non-profit', 'Construction', 'Aerospace', 'Healthcare', 'Finance', 'Engineering'];
-    var counter = 0;
-    function typeWriter() {
-        var i = 0;
-        var txt = data[counter];
-        counter++;
-        if (counter >= data.length) {
+    var counter = 1;
+    var curr_timer = null;
+    setInterval(() => {
+        const tw = document.getElementById("type-writer");
+       tw.innerHTML = data[counter];
+       tw.classList.add("fade-in");
+       setTimeout(() => {
+            tw.classList.remove("fade-in");
+        }, 1000);
+        if (counter >= data.length - 1) {
             counter = 0;
         }
-        var speed = 100; // The speed/duration of the effect in milliseconds
-        var element = document.getElementById("type-writer");
-        element.innerHTML = "";
+        else
+            counter++;
+    }, 5000);
+    // function typeWriter() {
+    //     var i = 0;
+    //     var txt = data[counter];
+    //     counter++;
+    //     if (counter >= data.length) {
+    //         counter = 0;
+    //     }
+    //     var speed = 100; // The speed/duration of the effect in milliseconds
+    //     var element = document.getElementById("type-writer");
+    //     element.innerHTML = "";
         
-        function type() {
-            if (i < txt.length) {
-                element.innerHTML += txt.charAt(i);
-                i++;
-                setTimeout(type, speed);
-            }
-        }
+    //     function type() {
+    //         if (i < txt.length) {
+    //             if (document.visibilityState === 'hidden') {
+    //                 clearTimeout(curr_timer);
+    //                 return;
+    //             }
+    //             element.innerHTML += txt.charAt(i);
+    //             i++;
+    //             setTimeout(type, speed);
+    //         }
+    //     }
 
+    //     if (document.visibilityState === 'visible') {
+    //         type();
+            
+    //     }
 
-        type();
+    //     curr_timer = setTimeout(typeWriter, 5000);
+        
 
-       setTimeout(typeWriter, 5000);
-    }
-    typeWriter();
-    
+       
+    // }
+    // typeWriter();
+    // document.addEventListener('visibilitychange', function() {
+    //     if (document.visibilityState === 'hidden') {
+    //         clearTimeout(curr_timer);
+    //     } else {
+    //         typeWriter();
+    //     }
+    // });
 });
 
 
