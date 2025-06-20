@@ -35,6 +35,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
             
         });
     });
+
+
     var data = ['Small Business', 'Law Firm', 'Non-profit', 'Construction', 'Aerospace', 'Healthcare', 'Finance', 'Engineering'];
     var counter = 0;
     function typeWriter() {
@@ -58,9 +60,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
         type();
+
+       setTimeout(typeWriter, 5000);
     }
     typeWriter();
-    setInterval(typeWriter, 5000);
+    
 });
 
 
