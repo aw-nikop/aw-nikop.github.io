@@ -6,7 +6,6 @@ import ls from 'localstorage-slim';
 
 window.addEventListener('DOMContentLoaded', (event) => {
 
-
     var canvas = document.getElementById("offcanvasNav");
     var bscanvas = new bootstrap.Offcanvas(canvas);
     document.querySelectorAll('.accordion-body a').forEach((el) => {
@@ -32,12 +31,71 @@ window.addEventListener('DOMContentLoaded', (event) => {
             },
             body: JSON.stringify(j_data)
         }).then((res) => {
-            if (res.ok) {
-                document.getElementById("form").innerHTML = "<h2>Message Sent!</h2>";
-            } else {
-                document.getElementById("form").innerHTML = "<h2>Something went wrong. <a href='mailto:support@altonworks.com'>Click Here</a> to send an email manually.</h2>";
-            }
+            document.getElementById("form").innerHTML = "<h2>Message Sent!</h2>";
+
         });
     });
+
+
+    var data = ['Small Business', 'Law Firm', 'Non-profit', 'Construction', 'Aerospace', 'Healthcare', 'Finance', 'Engineering'];
+    var counter = 1;
+    var curr_timer = null;
+    setInterval(() => {
+        const tw = document.getElementById("type-writer");
+        tw.innerHTML = data[counter];
+        tw.classList.add("fade-in");
+        setTimeout(() => {
+            tw.classList.remove("fade-in");
+        }, 1000);
+        if (counter >= data.length - 1) {
+            counter = 0;
+        }
+        else
+            counter++;
+    }, 5000);
+    // function typeWriter() {
+    //     var i = 0;
+    //     var txt = data[counter];
+    //     counter++;
+    //     if (counter >= data.length) {
+    //         counter = 0;
+    //     }
+    //     var speed = 100; // The speed/duration of the effect in milliseconds
+    //     var element = document.getElementById("type-writer");
+    //     element.innerHTML = "";
+
+    //     function type() {
+    //         if (i < txt.length) {
+    //             if (document.visibilityState === 'hidden') {
+    //                 clearTimeout(curr_timer);
+    //                 return;
+    //             }
+    //             element.innerHTML += txt.charAt(i);
+    //             i++;
+    //             setTimeout(type, speed);
+    //         }
+    //     }
+
+    //     if (document.visibilityState === 'visible') {
+    //         type();
+
+    //     }
+
+    //     curr_timer = setTimeout(typeWriter, 5000);
+
+
+
+    // }
+    // typeWriter();
+    // document.addEventListener('visibilitychange', function() {
+    //     if (document.visibilityState === 'hidden') {
+    //         clearTimeout(curr_timer);
+    //     } else {
+    //         typeWriter();
+    //     }
+    // });
 });
+
+
+
 
