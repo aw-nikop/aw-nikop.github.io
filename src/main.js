@@ -47,12 +47,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
         setTimeout(() => {
             tw.classList.remove("fade-in");
         }, 1000);
-        if (counter >= data.length - 1) {
+        if (counter == data.length - 1) {
             counter = 0;
         }
         else
             counter++;
-    }, 5000);
+    }, 2000);
     // function typeWriter() {
     //     var i = 0;
     //     var txt = data[counter];
