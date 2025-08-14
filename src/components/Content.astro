@@ -1,0 +1,32 @@
+---
+const { title, p1, p2, features } = Astro.props;
+---
+<div id="hero">
+    <h1>{title}</h1>
+    <span class="orange-border"></span>
+</div>
+<section>
+
+    <p>
+        {p1}
+    </p>
+
+    <div class="row flex-column flex-sm-row">
+        {features.map(feature => (
+        <div class="col">
+            <div class="card">
+                <div class="card-icon-container">
+                    <i class={`bi ${feature.image}`}></i>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{feature.title}</h5>
+                    <p class="card-text">{feature.content}</p>
+                </div>
+            </div>
+        </div>
+        ))}
+    </div>
+    <p>
+        {p2}
+    </p>
+</section>

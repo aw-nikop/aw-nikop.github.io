@@ -1,0 +1,204 @@
+{
+  "tech-support": {
+    "title": "Tech Support",
+    "image": "https://www.altoncomputersolutions.com/wp-content/uploads/2021/07/solutions-details2.png?id=2382",
+    "p1": "At Alton Computer Solutions our team is ready to assist your business, providing experienced tech support, on-site, remote or over the phone.",
+    "features": [
+      {
+        "image": "bi-wrench",
+        "title": "Hardware Repairs",
+        "content": "We replace faulty power supplies, swap out old hard drives, and set up new computers or printers."
+      },
+      {
+        "image": "bi-headset",
+        "title": "Software Troubleshooting",
+        "content": "We resolve issues with software like Outlook, Adobe, and more."
+      },
+      {
+        "image": "bi-router",
+        "title": "Networking Fixes",
+        "content": "Our team addresses pesky network issues to keep your systems running smoothly."
+      }
+    ],
+    "p2": "For reliable, hands-on tech support, Alton Computer Solutions is your trusted partner, ready to tackle any IT issue with expertise and care."
+  },
+  "networking": {
+    "title": "Networking",
+    "image": "https://www.altoncomputersolutions.com/wp-content/uploads/2019/02/blur-computer-connection-222.jpg?id=2165",
+    "p1": "Need networking support? Alton Computer Solutions provides a range of networking hardware and support to ensure your business stays connected and efficient.",
+    "features": [
+      {
+        "image": "bi-wrench",
+        "title": "Network Equipment and Setup",
+        "content": "We supply and configure network switches, routers, racks, and wireless systems to ensure seamless connectivity."
+      },
+      {
+        "image": "bi-headset",
+        "title": "Troubleshooting and Maintenance",
+        "content": "Our team is ready to diagnose and resolve network issues promptly, minimizing downtime."
+      },
+      {
+        "image": "bi-router",
+        "title": "Customized Solutions",
+        "content": "We tailor our networking services to fit the unique requirements of your business, whether it’s a small office or a large enterprise."
+      }
+    ],
+    "p2": "At Alton Computer Solutions, we understand the importance of a reliable network in powering your business operations. Trust us to keep you connected."
+  },
+  "managed-it-plans": {
+    "title": "Managed IT Plans",
+    "image": "https://www.altoncomputersolutions.com/wp-content/uploads/2021/07/small-1.png?id=2335",
+    "p1": "Alton Computer Solutions offers  Basic and Premium Managed IT Plans that cater to businesses of all sizes. As your local IT partner, we’re here to provide on-site support when needed, ensuring your systems are always in top shape.",
+    "features": [
+      {
+        "image": "bi-pc-display",
+        "title": "Workstation and Server Plans",
+        "content": "We provide monitoring, maintenance, and security for your devices."
+      },
+      {
+        "image": "bi-cloud-arrow-up",
+        "title": "Cloud Services Plans",
+        "content": "Our plans include Microsoft 365 services to optimize collaboration and productivity."
+      },
+      {
+        "image": "bi-person-gear",
+        "title": "Network and Cloud Management Plans",
+        "content": "We handle the management of your routers, firewalls, and Wi-Fi systems, so you can focus on your business."
+      }
+    ],
+    "p2": "Let Alton Computer Solutions take the stress out of IT management, so you can focus on growing your business."
+  },
+  "hybrid-cloud-migrations": {
+    "title": "Hybrid Cloud Migrations",
+    "image": "https://www.altoncomputersolutions.com/wp-content/uploads/2021/07/cloud-1.png?id=2329",
+    "p1": "Many businesses require a mix of on-premises and cloud solutions. Alton Computer Solutions specializes in setting up and maintaining hybrid cloud environments, integrating on-site servers with cloud systems for optimal performance and security.",
+    "features": [
+      {
+        "image": "bi-hdd-rack",
+        "title": "On-Premises Server Setup and Maintenance",
+        "content": "For businesses handling highly sensitive data, we ensure your on-site servers operate seamlessly."
+      },
+      {
+        "image": "bi-cloud-haze2",
+        "title": "Cloud Integration",
+        "content": "We link less sensitive data to secure cloud platforms, creating a balanced and efficient hybrid environment."
+      },
+      {
+        "image": "bi-speedometer2",
+        "title": "Performance Optimization",
+        "content": "Our hybrid cloud solutions are designed to deliver the best of both worlds—local control and cloud scalability."
+      }
+    ],
+    "p2": "Alton Computer Solutions bridges the gap between on-premises and cloud systems, ensuring your hybrid environment runs smoothly and efficiently, so your business thrives."
+  },
+  "firewall": {
+    "title": "Firewalls with VPN",
+    "image": "https://www.altoncomputersolutions.com/wp-content/uploads/2021/07/VPn.jpg?id=2425",
+    "p1": "Protecting your business from cyber threats is essential, and our firewall solutions are designed to provide robust security. Alton Computer Solutions is here to recommend, implement, and maintain firewalls that best suit your business needs and internet speeds.",
+    "features": [
+      {
+        "image": "bi-shield-lock",
+        "title": "Subscription-Based Security",
+        "content": "Firewalls with built-in services to prevent viruses and malware."
+      },
+      {
+        "image": "bi-fingerprint",
+        "title": "Internet Traffic Monitoring",
+        "content": "We monitor data traffic to and from your business, ensuring safe connections."
+      },
+      {
+        "image": "bi-hdd-network",
+        "title": "VPN Setup and Management",
+        "content": "We offer point-to-point and client VPN solutions for secure remote access."
+      }
+    ],
+    "p2": "With Alton Computer Solutions, you can rest assured your business is protected from cyber threats with reliable, tailored firewall solutions."
+  },
+  "cybersecurity": {
+    "title": "Cybersecurity and Compliance",
+    "image": "https://www.altoncomputersolutions.com/wp-content/uploads/2021/07/young-man-engineer-making-program-analyses-1.jpg?id=2428",
+    "p1": "Cybersecurity is more critical than ever. Alton Computer Solutions helps businesses identify and address security vulnerabilities.",
+    "features": [
+      {
+        "image": "bi-clipboard-check",
+        "title": "Security Controls Implementation",
+        "content": "We review and implement the necessary measures to secure your business."
+      },
+      {
+        "image": "bi-send-exclamation",
+        "title": "CISA and CSET Assessments",
+        "content": "Identify, protect, detect, respond, and recover with our detailed evaluations and remediation plans."
+      },
+      {
+        "image": "bi-list-check",
+        "title": "Cybersecurity Performance Goals",
+        "content": "We provide CISA’s CPG assessment and checklist to help you stay compliant and secure."
+      }
+    ],
+    "p2": "Partner with Alton Computer Solutions for cybersecurity solutions that not only protect your business but also ensure compliance with industry standards."
+  },
+  "backup": {
+    "title": "Backup and Disaster Recovery Plans",
+    "image": "https://www.altoncomputersolutions.com/wp-content/uploads/2021/07/Financ.jpg?id=2424",
+    "p1": "Data loss can cripple a business. At Alton Computer Solutions, we provide fully managed backup and disaster recovery solutions to protect your critical data. With our local presence, we ensure hands-on support to keep your backups healthy and reliable.",
+    "features": [
+      {
+        "image": "bi-shield-shaded",
+        "title": "Comprehensive Protection",
+        "content": "Safeguard data stored on workstations, servers, and the cloud through Microsoft 365."
+      },
+      {
+        "image": "bi-recycle",
+        "title": "Continuous Monitoring and Testing",
+        "content": "We regularly monitor and test backups to ensure data integrity and readiness for recovery."
+      },
+      {
+        "image": "bi-virus2",
+        "title": "Ransomware Protection",
+        "content": "Our solutions are designed to prevent data loss due to ransomware attacks."
+      }
+    ],
+    "p2": "When it comes to protecting your business data, trust Alton Computer Solutions to deliver peace of mind through proactive backup and disaster recovery planning."
+  },
+  "automation": {
+    "title": "Automation and Integration",
+    "image": "",
+    "p1": "We offer custom software solutions tailored to your business needs. Alton Computer Solutions specializes in developing software that streamlines your operations, enhances productivity, and provides a competitive edge in the market.",
+    "features": [
+      {
+        "image": "bi-shuffle",
+        "title": "Automation",
+        "content": "We use scripts, Power Automate and custom programs to automate repetitive, time-consuming tasks."
+      },
+      {
+        "image": "bi-stack",
+        "title": "Integrate",
+        "content": "Integrate different workflows, sites, and systems to create a seamless business environment."
+      }
+    ],
+    "p2": "Alton Computer Solutions is your go-to partner for custom software solutions that drive business growth and success."
+  },
+  "template": {
+    "title": "",
+    "image": "",
+    "p1": "",
+    "features": [
+      {
+        "image": "",
+        "title": "",
+        "content": ""
+      },
+      {
+        "image": "",
+        "title": "",
+        "content": ""
+      },
+      {
+        "image": "",
+        "title": "",
+        "content": ""
+      }
+    ],
+    "p2": ""
+  }
+}
