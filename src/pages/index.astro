@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js?url";
 ---
 
 <BaseLayout
@@ -9,10 +8,10 @@ import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js?url";
 >
   <Fragment slot="head">
     <!-- Google tag (gtag.js) -->
-    <script src={bootstrap}></script>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z8ZZYYPLES"
     ></script>
-    <script id="mcjs">
+    <script id="mcjs" is:inline>
       !(function (c, h, i, m, p) {
         (m = c.createElement(h)),
           (p = c.getElementsByTagName(h)[0]),
@@ -25,7 +24,7 @@ import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js?url";
         "https://chimpstatic.com/mcjs-connected/js/users/4b7be73e582fac33a01c064fb/2b7bb542913d2b47a6fe2543d.js"
       );
     </script>
-    <script>
+    <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
@@ -33,9 +32,9 @@ import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js?url";
       gtag("js", new Date());
       gtag("config", "G-Z8ZZYYPLES");
     </script>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" is:inline></script>
   </Fragment>
-  <script>
+  <script is:inline>
     function onSubmit(token) {
       document.getElementById("token").value = token;
       document.getElementById("form").dispatchEvent(new Event("submit"));

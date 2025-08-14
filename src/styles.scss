@@ -1,5 +1,4 @@
 // Import all of Bootstrap's CSS
-@use "bootstrap/scss/bootstrap";
 @use "bootstrap-icons/font/bootstrap-icons.css";
 :root {
   --aw-orange: #f16243;
@@ -805,7 +804,7 @@ div#aw-footer {
     &#small-connect {
       li {
         display: flex;
-        >:first-child {
+        > :first-child {
           margin-right: 10px;
           justify-self: center;
           align-self: center;
@@ -813,8 +812,6 @@ div#aw-footer {
       }
     }
   }
-
-  
 
   a {
     text-decoration: none;
@@ -872,70 +869,70 @@ div#aw-footer {
 
 /* Solutions page styles */
 #solutions-body {
-    padding: 0 !important;
-    background-color: var(--alternate-bg);
-    margin-bottom: 5vh;
-    #hero {
-      width: 100%;
-      color: white;
-      padding: 7vh 0;
-      background-size: cover;
-      background-position: center;
-      box-shadow: inset 0 0 0 2000px var(--aw-orange-light);
-      text-align: center;
-      h1 {
-        font-size: 4rem;
-        font-weight: bolder;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-      }
-      .orange-border {
-        width: 20%;
-        height: 10px;
-        background-color: var(--aw-orange);
-        display: block;
-        justify-self: center;
-      }
-    }
-  
-    section {
-      padding: 7vh 7vw;
-      p {
-        font-size: 1.3em;
-      }
-    }
-    .row {
-      margin: 5vh 0;
-    }
-    .card {
-      height: 100%;
-      border: 0;
-      background-color: transparent;
-      color: var(--font-color);
-    }
-    .card-icon-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 10%;
+  padding: 0 !important;
+  background-color: var(--alternate-bg);
+  margin-bottom: 5vh;
+  #hero {
+    width: 100%;
+    color: white;
+    padding: 7vh 0;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 2000px var(--aw-orange-light);
+    text-align: center;
+    h1 {
       font-size: 4rem;
+      font-weight: bolder;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
     }
-  
-    .card-body {
-      text-align: center;
-  
-      h5 {
-        font-size: 1.5rem;
-        font-weight: bold;
-      }
-    }
-  
-    & + div > #aw-footer {
-      margin: 0 10vw;
-      @media (max-width: 800px) {
-        margin: 0;
-      }
+    .orange-border {
+      width: 20%;
+      height: 10px;
+      background-color: var(--aw-orange);
+      display: block;
+      justify-self: center;
     }
   }
+
+  section {
+    padding: 7vh 7vw;
+    p {
+      font-size: 1.3em;
+    }
+  }
+  .row {
+    margin: 5vh 0;
+  }
+  .card {
+    height: 100%;
+    border: 0;
+    background-color: transparent;
+    color: var(--font-color);
+  }
+  .card-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+    font-size: 4rem;
+  }
+
+  .card-body {
+    text-align: center;
+
+    h5 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+
+  & + div > #aw-footer {
+    margin: 0 10vw;
+    @media (max-width: 800px) {
+      margin: 0;
+    }
+  }
+}
 /* Alton's articles styles */
 #article-body {
   font-size: 1.4rem;
@@ -971,11 +968,16 @@ div#aw-footer {
     margin-top: 2rem;
     margin-bottom: 1rem;
     padding-left: 1rem;
-    border-left: 10px solid var(--aw-orange)
+    border-left: 10px solid var(--aw-orange);
   }
 
   .card {
-    background: linear-gradient(to right, var(--alternate-bg) 50%, var(--aw-orange-lighter) 50%) left;
+    background: linear-gradient(
+        to right,
+        var(--alternate-bg) 50%,
+        var(--aw-orange-lighter) 50%
+      )
+      left;
     background-size: 200% 100%;
     background-position: left bottom;
     border: 0;
@@ -986,8 +988,8 @@ div#aw-footer {
       background-position: right bottom;
     }
     .card-body {
-        display: flex;
-        flex-direction: column;
+      display: flex;
+      flex-direction: column;
       > a {
         margin-top: auto;
         justify-self: end;
@@ -1008,8 +1010,6 @@ div#aw-footer {
   .row {
     --bs-gutter-y: 1.5rem;
   }
-
-
 }
 
 #hero {
