@@ -1,9 +1,6 @@
 // Import all of Bootstrap's CSS
 @use "bootstrap/scss/bootstrap";
 @use "bootstrap-icons/font/bootstrap-icons.css";
-@import "./partials/partial.scss";
-@import "./solutions/solutions.scss";
-@import "./altons-articles/articles.scss";
 :root {
   --aw-orange: #f16243;
   --aw-orange-light: #f16343b4;
@@ -647,5 +644,392 @@ section {
     &:hover {
       border-color: var(--aw-orange);
     }
+  }
+}
+
+/* Partial (navbar and footer) styles */
+#main-navbar {
+  background-color: var(--main-bg);
+  max-width: 100%;
+
+  .ac-button {
+    background-color: inherit;
+    color: inherit;
+    outline: none;
+    border: none;
+    box-shadow: none;
+  }
+  div[class*="col"] {
+    a:not(.dropdown-item) {
+      border-bottom: 3px solid transparent;
+      color: var(--font-color);
+      text-decoration: none;
+      text-wrap: nowrap;
+      transition: 0.2s ease-out;
+      margin: 0 10px;
+    }
+    > span {
+      > a:hover,
+      > div > a:hover {
+        color: var(--aw-orange);
+      }
+    }
+  }
+  .dropdown-menu {
+    margin-left: -10px !important;
+    border-radius: 0;
+    background-color: var(--main-bg);
+    color: var(--font-color);
+
+    .dropdown-item {
+      color: var(--font-color);
+      &:hover {
+        background-color: var(--alternate-bg);
+      }
+    }
+  }
+}
+
+.offcanvas {
+  background-color: var(--main-bg);
+  color: var(--font-color);
+
+  .accordion-item,
+  .accordion-button {
+    background-color: var(--main-bg);
+    color: var(--font-color);
+    a {
+      margin: 0 !important;
+    }
+  }
+  .offcanvas-title {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .btn-close {
+    @media (prefers-color-scheme: dark) {
+      filter: invert(100%);
+    }
+  }
+
+  .accordion-button::after {
+    @media (prefers-color-scheme: dark) {
+      background-image: url("/arrow-down-short.svg");
+    }
+    background-image: url("/arrow-down-short-dark.svg");
+  }
+  ul {
+    list-style-type: none;
+    text-align: left;
+  }
+  .accordion-item > .accordion-body {
+    text-align: left;
+    padding: 0;
+
+    > a {
+      padding: var(--bs-accordion-body-padding-y)
+        var(--bs-accordion-body-padding-x);
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+.brand-logo {
+  @media (prefers-color-scheme: dark) {
+    content: url("/cropped-logo-white.webp");
+    height: auto;
+  }
+}
+
+.phone {
+  color: var(--aw-orange) !important;
+}
+
+.vr {
+  width: 1px !important;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+div#aw-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    li {
+      margin: 10px 0;
+      a:hover {
+        color: var(--aw-orange);
+        transition: 0.2s ease-out;
+      }
+    }
+    &:first-child {
+      justify-content: space-between;
+      i {
+        margin: 0 15px;
+        font-size: 3rem;
+        color: var(--aw-orange);
+      }
+      flex-basis: 20%;
+    }
+    &:last-child {
+      flex-basis: 20%;
+    }
+    margin: 20px;
+  }
+
+  > div.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @media (max-width: 500px) {
+      flex-direction: column;
+      align-items: center;
+      text-align: left;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    &#small-connect {
+      li {
+        display: flex;
+        >:first-child {
+          margin-right: 10px;
+          justify-self: center;
+          align-self: center;
+        }
+      }
+    }
+  }
+
+  
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.modal {
+  --bs-modal-border-color: none;
+
+  .modal-body,
+  .modal-header {
+    color: var(--font-color);
+    background-color: var(--main-bg);
+    border-bottom-color: var(--aw-orange);
+  }
+
+  .modal-header {
+    .btn-close {
+      @media (prefers-color-scheme: dark) {
+        filter: invert(100%);
+      }
+    }
+  }
+
+  .modal-body {
+    form {
+      input,
+      textarea,
+      textarea:focus,
+      input:focus {
+        background-color: var(--alternate-bg);
+        color: var(--font-color);
+        border: 1px solid var(--aw-orange);
+      }
+
+      label,
+      label::after {
+        color: var(--font-color) !important;
+        background-color: transparent !important;
+      }
+    }
+    #mc_embed_signup {
+      width: auto;
+      background-color: var(--main-bg);
+      color: var(--font-color);
+      font: inherit;
+    }
+
+    #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+      background-color: transparent;
+    }
+  }
+}
+
+/* Solutions page styles */
+#solutions-body {
+    padding: 0 !important;
+    background-color: var(--alternate-bg);
+    margin-bottom: 5vh;
+    #hero {
+      width: 100%;
+      color: white;
+      padding: 7vh 0;
+      background-size: cover;
+      background-position: center;
+      box-shadow: inset 0 0 0 2000px var(--aw-orange-light);
+      text-align: center;
+      h1 {
+        font-size: 4rem;
+        font-weight: bolder;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+      }
+      .orange-border {
+        width: 20%;
+        height: 10px;
+        background-color: var(--aw-orange);
+        display: block;
+        justify-self: center;
+      }
+    }
+  
+    section {
+      padding: 7vh 7vw;
+      p {
+        font-size: 1.3em;
+      }
+    }
+    .row {
+      margin: 5vh 0;
+    }
+    .card {
+      height: 100%;
+      border: 0;
+      background-color: transparent;
+      color: var(--font-color);
+    }
+    .card-icon-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10%;
+      font-size: 4rem;
+    }
+  
+    .card-body {
+      text-align: center;
+  
+      h5 {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+    }
+  
+    & + div > #aw-footer {
+      margin: 0 10vw;
+      @media (max-width: 800px) {
+        margin: 0;
+      }
+    }
+  }
+/* Alton's articles styles */
+#article-body {
+  font-size: 1.4rem;
+  padding: 7vh 25vw;
+
+  @media (max-width: 1000px) {
+    padding: 7vh 5vw;
+  }
+
+  .text-muted {
+    @media (prefers-color-scheme: dark) {
+      filter: invert(100%);
+    }
+  }
+
+  a {
+    color: var(--aw-orange);
+    border-bottom: 1px solid transparent;
+    text-decoration: none;
+    transition: 0.3s;
+    &:hover {
+      border-color: var(--aw-orange);
+    }
+  }
+
+  .important {
+    font-weight: bold;
+    padding: 5px;
+    background-color: var(--aw-orange);
+  }
+
+  h2.section {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 10px solid var(--aw-orange)
+  }
+
+  .card {
+    background: linear-gradient(to right, var(--alternate-bg) 50%, var(--aw-orange-lighter) 50%) left;
+    background-size: 200% 100%;
+    background-position: left bottom;
+    border: 0;
+    color: var(--font-color);
+    height: 100%;
+    transition: background 0.5s ease-in-out;
+    &:hover {
+      background-position: right bottom;
+    }
+    .card-body {
+        display: flex;
+        flex-direction: column;
+      > a {
+        margin-top: auto;
+        justify-self: end;
+        align-self: flex-start;
+        border: 0;
+        border-bottom: 1px solid transparent;
+        &:hover {
+          border-color: var(--aw-orange);
+        }
+      }
+    }
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+
+  .row {
+    --bs-gutter-y: 1.5rem;
+  }
+
+
+}
+
+#hero {
+  width: 100%;
+  color: white;
+  padding: 7vh 0;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--aw-orange);
+  text-align: center;
+  h1 {
+    font-size: 4rem;
+    font-weight: bolder;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  }
+  .orange-border {
+    width: 20%;
+    height: 10px;
+    background-color: var(--aw-orange);
+    display: block;
+    justify-self: center;
   }
 }
