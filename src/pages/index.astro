@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout
+  title="Altonworks"
+  description="Alton Computer Solutions is the outsourced IT provider for Seattle-area businesses. We are up to speed on the latest IT Solutions that work reliability and will not break the bank. We listen to our customers and do not force a one size fits all solution. Instead, we build a computer network around your specific business needs."
+>
+  <Fragment slot="head">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z8ZZYYPLES"></script>
+    <script id="mcjs">!function (c, h, i, m, p) { m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p) }(document, "script", "https://chimpstatic.com/mcjs-connected/js/users/4b7be73e582fac33a01c064fb/2b7bb542913d2b47a6fe2543d.js");</script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-Z8ZZYYPLES');
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+  </Fragment>
+  <script type="module" src="../main.js"></script>
+  <script>
+    function onSubmit(token) {
+      document.getElementById("token").value = token;
+      document.getElementById("form").dispatchEvent(new Event('submit'));
+    }
+  </script>
+  <!-- TODO: migrate homepage content to Astro -->
+</BaseLayout>
