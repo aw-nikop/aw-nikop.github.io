@@ -67,11 +67,7 @@ CALL git switch upload-temp || (
 CALL git add .
 CALL git commit -m "Automated publish"
 
-CALL git push --set-upstream origin upload-temp
-if errorlevel 1 (
-    echo Git push failed.
-    exit /b 1
-)
+call git push --set-upstream origin upload-temp
 REM Publish
 echo Publishing...
 CALL npm run publish
