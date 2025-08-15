@@ -204,13 +204,6 @@ declare module 'astro:content' {
   collection: "articles";
   data: any
 } & { render(): Render[".md"] };
-"seattle-it-support-hardware.md": {
-	id: "seattle-it-support-hardware.md";
-  slug: "seattle-it-support-hardware";
-  body: string;
-  collection: "articles";
-  data: any
-} & { render(): Render[".md"] };
 "time-for-an-upgrade.md": {
 	id: "time-for-an-upgrade.md";
   slug: "time-for-an-upgrade";
