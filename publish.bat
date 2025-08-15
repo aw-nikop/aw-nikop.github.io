@@ -67,13 +67,10 @@ CALL git switch upload-temp || (
 CALL git add .
 CALL git commit -m "Automated publish"
 
-CALL gh auth status >nul 2>nul
+CALL gh auth login
 if errorlevel 1 (
-    CALL gh auth login --web
-    if errorlevel 1 (
-        echo GitHub authentication failed.
-        exit /b 1
-    )
+    echo GitHub authentication failed.
+    exit /b 1
 )
 CALL gh pr create
 if errorlevel 1 (
