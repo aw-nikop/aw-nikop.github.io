@@ -67,17 +67,11 @@ CALL git switch upload-temp || (
 CALL git add .
 CALL git commit -m "Automated publish"
 
-CALL gh auth login
+CALL git push --set-upstream origin upload-temp
 if errorlevel 1 (
-    echo GitHub authentication failed.
+    echo Git push failed.
     exit /b 1
 )
-CALL gh pr create
-if errorlevel 1 (
-    echo Git operations failed.
-    exit /b 1
-)
-
 REM Publish
 echo Publishing...
 CALL npm run publish
