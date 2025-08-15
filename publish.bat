@@ -60,6 +60,6 @@ echo Pushing changes to git...
 CALL git add .
 CALL git commit -m "Automated publish"
 
-call git push
+call git push --set-upstream origin master
 
 echo Publish completed successfully.
