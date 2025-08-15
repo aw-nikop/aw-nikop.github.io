@@ -1,12 +1,34 @@
 @echo off
 REM Ensure Node.js and npm are installed
 where node >nul 2>nul || (
-    echo Node.js is not installed. Please install Node.js and npm.
-    exit /b 1
+    CALL powershell -c "irm https://community.chocolatey.org/install.ps1|iex"
+
+    CALL choco install nodejs --version="22.18.0"
+    if errorlevel 1 (
+        echo Node.js installation failed.
+        exit /b 1
+    )
 )
 where npm >nul 2>nul || (
     echo npm is not installed. Please install npm.
     exit /b 1
+)
+
+where git >nul 2>nul || (
+    CALL choco install git.install --version 2.50.1 -y
+    if errorlevel 1 (
+        echo Git installation failed.
+            exit /b 1
+    )
+
+)
+
+where gh >nul 2>nul || (
+    CALL choco install gh --version 2.76.2 -y
+    if errorlevel 1 (
+        echo GitHub CLI installation failed.
+        exit /b 1
+    )
 )
 
 REM Install dependencies
@@ -37,9 +59,9 @@ REM Push changes to git
 echo Pushing changes to git...
 CALL git add .
 CALL git commit -m "Automated publish"
-CALL git request-pull origin master
+CALL gh pr create --title "Automated Publish" --body "This PR was created automatically by the publish script."
 if errorlevel 1 (
-    echo Git push failed.
+    echo Git operations failed.
     exit /b 1
 )
 
