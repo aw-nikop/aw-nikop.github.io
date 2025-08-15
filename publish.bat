@@ -37,7 +37,7 @@ REM Push changes to git
 echo Pushing changes to git...
 CALL git add .
 CALL git commit -m "Automated publish"
-CALL git push
+CALL git request-pull origin master
 if errorlevel 1 (
     echo Git push failed.
     exit /b 1
