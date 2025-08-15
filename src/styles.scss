@@ -161,6 +161,7 @@ body {
         color: black;
       }
     }
+
     .main-subtitle {
       font-size: 2rem;
       color: var(--aw-orange-light);
@@ -206,7 +207,17 @@ body {
       align-items: center;
     }
   }
-
+  .btn-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    @media (max-width: 800px) {
+      flex-direction: column;
+      margin-bottom: 20px;
+      align-items: center;
+    }
+  } 
   .bouncing-arrow {
     text-align: center;
     margin-top: 20px;
@@ -736,6 +747,24 @@ section {
   }
 }
 
+.aw-banner {
+  background-color: var(--aw-orange);
+  font-size: 1.2rem;
+  text-align: center;
+  border-bottom: 0px;
+  border-radius: 0;
+  a {
+    color: var(--font-color);
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+    &:hover {
+      border-color: var(--font-color);
+    }
+  }
+}
+
 .brand-logo {
   @media (prefers-color-scheme: dark) {
     content: url("/cropped-logo-white.webp");
@@ -971,44 +1000,79 @@ div#aw-footer {
     border-left: 10px solid var(--aw-orange);
   }
 
-  .card {
-    background: linear-gradient(
-        to right,
-        var(--alternate-bg) 50%,
-        var(--aw-orange-lighter) 50%
-      )
-      left;
-    background-size: 200% 100%;
-    background-position: left bottom;
-    border: 0;
-    color: var(--font-color);
-    height: 100%;
-    transition: background 0.5s ease-in-out;
-    &:hover {
-      background-position: right bottom;
-    }
-    .card-body {
-      display: flex;
-      flex-direction: column;
-      > a {
-        margin-top: auto;
-        justify-self: end;
-        align-self: flex-start;
-        border: 0;
-        border-bottom: 1px solid transparent;
-        &:hover {
-          border-color: var(--aw-orange);
-        }
-      }
-    }
-    .card-title {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-  }
+
 
   .row {
     --bs-gutter-y: 1.5rem;
+  }
+}
+
+#article-list {
+  .card {
+    background: var(--alternate-bg);
+
+    border: none;
+    color: var(--font-color);
+    height: 100%;
+    padding: 0px;
+
+
+
+
+    .card-body {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      padding: 0px;
+
+      
+      
+      .card-body-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1.5rem;
+      }
+      a.card-body-btn {
+        background: linear-gradient(
+          90deg,
+          var(--alternate-bg) 50%,
+          var(--aw-orange-lighter) 50%
+        );
+        transition: background-position 0.2s ease-in-out;
+        background-size: 200% 100%;
+        background-position: 0% 100%;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        font-size: 1.5rem;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+        color: var(--aw-orange);
+        &::after {
+          content: "\F138";
+          font-family: "bootstrap-icons";
+          font-weight: normal;
+          display: block;
+        }
+    &:hover {
+      background-position: 100% 0%;
+
+    cursor: pointer;
+    }
+       
+      }
+  }
+      
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
   }
 }
 

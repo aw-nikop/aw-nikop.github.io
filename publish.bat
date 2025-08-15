@@ -58,7 +58,7 @@ if errorlevel 1 (
 REM Push changes to git
 echo Pushing changes to git...
 CALL git add .
-CALL git commit -m "Automated publish"
+CALL git commit
 
 call git push --set-upstream origin master
 

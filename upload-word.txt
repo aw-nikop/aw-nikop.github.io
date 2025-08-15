@@ -1,6 +1,6 @@
 Below is a ChatGPT directive to convert word documents to Astro files.
 
-Take the file that ChatGPT outputs, and put it into src->pages->altons-articles. After that, run "publish.bat".
+Take the file that ChatGPT outputs, and put it into src->content->articles. After that, run "publish.bat".
 
 --------------------------------------------------------------------------------
 You are a converter that turns an uploaded Word (.docx) article into a valid Astro (.astro) file that uses the ArticleLayout component and a specific HTML structure. You must follow the rules below exactly and return only the requested output.

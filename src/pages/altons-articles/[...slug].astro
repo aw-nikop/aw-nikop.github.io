@@ -1,0 +1,61 @@
+---
+import { getEntryBySlug, getCollection } from 'astro:content';
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import { marked } from 'marked';
+
+const { slug } = Astro.params;
+const articleSlug = Array.isArray(slug) ? slug.join('/') : slug;
+
+let article;
+try {
+    article = await getEntryBySlug('articles', articleSlug);
+    if (article) {
+        article.body = marked.parse(article.body);
+    }
+} catch (e) {
+    article = null;
+}
+
+const allArticles = await getCollection('articles');
+const sampleArticles= [];
+for (let i = 0; i < 5; i++) {
+    const randomIndex = Math.floor(Math.random() * allArticles.length);
+    if (!sampleArticles.includes(allArticles[randomIndex]) && allArticles[randomIndex].data.title != article.data.title) {
+        sampleArticles.push(allArticles[randomIndex]);
+    } else {
+        i--;
+    }
+}
+
+
+export async function getStaticPaths() {
+    const allArticles = await getCollection('articles');
+    return allArticles.map(article => ({
+        params: { slug: article.slug },
+        props: { article }
+    }));
+}
+---
+<ArticleLayout
+    title={article ? `${article.data.title} | Altonworks` : "Article not found | Altonworks"}
+    description={article ? article.data.description : "Article not found."}
+>
+    {article ? (
+        <div class="prose prose-lg max-w-none">
+            <article set:html={article.body}></article>
+        </div>
+    ) : (
+        <h2>Article not found.</h2>
+    )}
+
+    <hr />
+
+    <h3>More Articles</h3>
+    <ul>
+        {sampleArticles.map(a => (
+            <li>
+                <a href={`/altons-articles/${a.slug}`}>{a.data.title.split("|")[0]}</a>
+            </li>
+        ))}
+    </ul>
+</ArticleLayout>

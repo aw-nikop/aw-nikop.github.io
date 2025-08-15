@@ -1,0 +1,246 @@
+declare module 'astro:content' {
+	interface RenderResult {
+		Content: import('astro/runtime/server/index.js').AstroComponentFactory;
+		headings: import('astro').MarkdownHeading[];
+		remarkPluginFrontmatter: Record<string, any>;
+	}
+	interface Render {
+		'.md': Promise<RenderResult>;
+	}
+
+	export interface RenderedContent {
+		html: string;
+		metadata?: {
+			imagePaths: Array<string>;
+			[key: string]: unknown;
+		};
+	}
+}
+
+declare module 'astro:content' {
+	type Flatten<T> = T extends { [K: string]: infer U } ? U : never;
+
+	export type CollectionKey = keyof AnyEntryMap;
+	export type CollectionEntry<C extends CollectionKey> = Flatten<AnyEntryMap[C]>;
+
+	export type ContentCollectionKey = keyof ContentEntryMap;
+	export type DataCollectionKey = keyof DataEntryMap;
+
+	type AllValuesOf<T> = T extends any ? T[keyof T] : never;
+	type ValidContentEntrySlug<C extends keyof ContentEntryMap> = AllValuesOf<
+		ContentEntryMap[C]
+	>['slug'];
+
+	/** @deprecated Use `getEntry` instead. */
+	export function getEntryBySlug<
+		C extends keyof ContentEntryMap,
+		E extends ValidContentEntrySlug<C> | (string & {}),
+	>(
+		collection: C,
+		// Note that this has to accept a regular string too, for SSR
+		entrySlug: E,
+	): E extends ValidContentEntrySlug<C>
+		? Promise<CollectionEntry<C>>
+		: Promise<CollectionEntry<C> | undefined>;
+
+	/** @deprecated Use `getEntry` instead. */
+	export function getDataEntryById<C extends keyof DataEntryMap, E extends keyof DataEntryMap[C]>(
+		collection: C,
+		entryId: E,
+	): Promise<CollectionEntry<C>>;
+
+	export function getCollection<C extends keyof AnyEntryMap, E extends CollectionEntry<C>>(
+		collection: C,
+		filter?: (entry: CollectionEntry<C>) => entry is E,
+	): Promise<E[]>;
+	export function getCollection<C extends keyof AnyEntryMap>(
+		collection: C,
+		filter?: (entry: CollectionEntry<C>) => unknown,
+	): Promise<CollectionEntry<C>[]>;
+
+	export function getEntry<
+		C extends keyof ContentEntryMap,
+		E extends ValidContentEntrySlug<C> | (string & {}),
+	>(entry: {
+		collection: C;
+		slug: E;
+	}): E extends ValidContentEntrySlug<C>
+		? Promise<CollectionEntry<C>>
+		: Promise<CollectionEntry<C> | undefined>;
+	export function getEntry<
+		C extends keyof DataEntryMap,
+		E extends keyof DataEntryMap[C] | (string & {}),
+	>(entry: {
+		collection: C;
+		id: E;
+	}): E extends keyof DataEntryMap[C]
+		? Promise<DataEntryMap[C][E]>
+		: Promise<CollectionEntry<C> | undefined>;
+	export function getEntry<
+		C extends keyof ContentEntryMap,
+		E extends ValidContentEntrySlug<C> | (string & {}),
+	>(
+		collection: C,
+		slug: E,
+	): E extends ValidContentEntrySlug<C>
+		? Promise<CollectionEntry<C>>
+		: Promise<CollectionEntry<C> | undefined>;
+	export function getEntry<
+		C extends keyof DataEntryMap,
+		E extends keyof DataEntryMap[C] | (string & {}),
+	>(
+		collection: C,
+		id: E,
+	): E extends keyof DataEntryMap[C]
+		? Promise<DataEntryMap[C][E]>
+		: Promise<CollectionEntry<C> | undefined>;
+
+	/** Resolve an array of entry references from the same collection */
+	export function getEntries<C extends keyof ContentEntryMap>(
+		entries: {
+			collection: C;
+			slug: ValidContentEntrySlug<C>;
+		}[],
+	): Promise<CollectionEntry<C>[]>;
+	export function getEntries<C extends keyof DataEntryMap>(
+		entries: {
+			collection: C;
+			id: keyof DataEntryMap[C];
+		}[],
+	): Promise<CollectionEntry<C>[]>;
+
+	export function render<C extends keyof AnyEntryMap>(
+		entry: AnyEntryMap[C][string],
+	): Promise<RenderResult>;
+
+	export function reference<C extends keyof AnyEntryMap>(
+		collection: C,
+	): import('astro/zod').ZodEffects<
+		import('astro/zod').ZodString,
+		C extends keyof ContentEntryMap
+			? {
+					collection: C;
+					slug: ValidContentEntrySlug<C>;
+				}
+			: {
+					collection: C;
+					id: keyof DataEntryMap[C];
+				}
+	>;
+	// Allow generic `string` to avoid excessive type errors in the config
+	// if `dev` is not running to update as you edit.
+	// Invalid collection names will be caught at build time.
+	export function reference<C extends string>(
+		collection: C,
+	): import('astro/zod').ZodEffects<import('astro/zod').ZodString, never>;
+
+	type ReturnTypeOrOriginal<T> = T extends (...args: any[]) => infer R ? R : T;
+	type InferEntrySchema<C extends keyof AnyEntryMap> = import('astro/zod').infer<
+		ReturnTypeOrOriginal<Required<ContentConfig['collections'][C]>['schema']>
+	>;
+
+	type ContentEntryMap = {
+		"articles": {
+"cybercriminal-attempts.md": {
+	id: "cybercriminal-attempts.md";
+  slug: "cybercriminal-attempts";
+  body: string;
+  collection: "articles";
+  data: any
+} & { render(): Render[".md"] };
+"cybersecurity-tips-to-protect-your-small-business.md": {
+	id: "cybersecurity-tips-to-protect-your-small-business.md";
+  slug: "cybersecurity-tips-to-protect-your-small-business";
+  body: string;
+  collection: "articles";
+  data: any
+} & { render(): Render[".md"] };
+"firewall-modern-day-moats.md": {
+	id: "firewall-modern-day-moats.md";
+  slug: "firewall-modern-day-moats";
+  body: string;
+  collection: "articles";
+  data: any
+} & { render(): Render[".md"] };
+"five-things-i-love-about-outlook.md": {
+	id: "five-things-i-love-about-outlook.md";
+  slug: "five-things-i-love-about-outlook";
+  body: string;
+  collection: "articles";
+  data: any
+} & { render(): Render[".md"] };
+"how-altonworks-automated-daily-tasks.md": {
+	id: "how-altonworks-automated-daily-tasks.md";
+  slug: "how-altonworks-automated-daily-tasks";
+  body: string;
+  collection: "articles";
+  data: any
+} & { render(): Render[".md"] };
+"how-do-phishing-emails-work.md": {
+	id: "how-do-phishing-emails-work.md";
+  slug: "how-do-phishing-emails-work";
+  body: string;
+  collection: "articles";
+  data: any
+} & { render(): Render[".md"] };
+"how-your-business-can-recycle-computer-equipment.md": {
+	id: "how-your-business-can-recycle-computer-equipment.md";
+  slug: "how-your-business-can-recycle-computer-equipment";
+  body: string;
+  collection: "articles";
+  data: any
+} & { render(): Render[".md"] };
+"preparing-your-small-business-for-e-commerce-during-the-holidays.md": {
+	id: "preparing-your-small-business-for-e-commerce-during-the-holidays.md";
+  slug: "preparing-your-small-business-for-e-commerce-during-the-holidays";
+  body: string;
+  collection: "articles";
+  data: any
+} & { render(): Render[".md"] };
+"remote-desktop-solutions-for-working-remotely.md": {
+	id: "remote-desktop-solutions-for-working-remotely.md";
+  slug: "remote-desktop-solutions-for-working-remotely";
+  body: string;
+  collection: "articles";
+  data: any
+} & { render(): Render[".md"] };
+"seattle-it-support-hardware.md": {
+	id: "seattle-it-support-hardware.md";
+  slug: "seattle-it-support-hardware";
+  body: string;
+  collection: "articles";
+  data: any
+} & { render(): Render[".md"] };
+"time-for-an-upgrade.md": {
+	id: "time-for-an-upgrade.md";
+  slug: "time-for-an-upgrade";
+  body: string;
+  collection: "articles";
+  data: any
+} & { render(): Render[".md"] };
+"weve-got-your-back.md": {
+	id: "weve-got-your-back.md";
+  slug: "weve-got-your-back";
+  body: string;
+  collection: "articles";
+  data: any
+} & { render(): Render[".md"] };
+"why-you-should-outsource-your-IT-as-a-small-business.md": {
+	id: "why-you-should-outsource-your-IT-as-a-small-business.md";
+  slug: "why-you-should-outsource-your-it-as-a-small-business";
+  body: string;
+  collection: "articles";
+  data: any
+} & { render(): Render[".md"] };
+};
+
+	};
+
+	type DataEntryMap = {
+		
+	};
+
+	type AnyEntryMap = ContentEntryMap & DataEntryMap;
+
+	export type ContentConfig = never;
+}
