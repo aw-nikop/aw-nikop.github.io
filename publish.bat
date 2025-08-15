@@ -57,13 +57,13 @@ if errorlevel 1 (
 
 REM Push changes to git
 echo Pushing changes to git...
-CALL git branch -d publish-temp 2>nul
-CALL git checkout -b publish-temp
-if errorlevel 1 (
-    echo Git checkout failed.
-    exit /b 1
+CALL git switch upload-temp || (
+    CALL git switch -c upload-temp
+    if errorlevel 1 (
+        echo Git branch creation failed.
+        exit /b 1
+    )
 )
-CALL git remote set-url origin master
 CALL git add .
 CALL git commit -m "Automated publish"
 
