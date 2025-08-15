@@ -59,26 +59,7 @@ REM Push changes to git
 echo Pushing changes to git...
 CALL git add .
 CALL git commit -m "Automated publish"
-CALL gh auth status >nul 2>nul
-if errorlevel 1 (
-    CALL gh auth login --web
-    if errorlevel 1 (
-        echo GitHub authentication failed.
-        exit /b 1
-    )
-)
-CALL gh pr create --title "Automated Publish" --body "This PR was created automatically by the publish script."
-if errorlevel 1 (
-    echo Git operations failed.
-    exit /b 1
-)
 
-REM Publish
-echo Publishing...
-CALL npm run publish
-if errorlevel 1 (
-    echo Publish failed.
-    exit /b 1
-)
+call git push origin main
 
 echo Publish completed successfully.
