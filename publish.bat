@@ -57,8 +57,16 @@ if errorlevel 1 (
 
 REM Push changes to git
 echo Pushing changes to git...
+CALL git branch -d publish-temp 2>nul
+CALL git checkout -b publish-temp
+if errorlevel 1 (
+    echo Git checkout failed.
+    exit /b 1
+)
+CALL git remote set-url origin master
 CALL git add .
 CALL git commit -m "Automated publish"
+
 CALL gh auth status >nul 2>nul
 if errorlevel 1 (
     CALL gh auth login --web
@@ -67,7 +75,7 @@ if errorlevel 1 (
         exit /b 1
     )
 )
-CALL gh pr create --title "Automated Publish" --body "This PR was created automatically by the publish script."
+CALL gh pr create
 if errorlevel 1 (
     echo Git operations failed.
     exit /b 1
