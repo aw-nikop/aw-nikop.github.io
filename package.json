@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "astro dev",
-    "preview": "astro preview",
+    "dev": "astro dev --host --port 8080",
+    "preview": "astro preview --host --port 8080",
     "build": "astro build",
     "publish": "gh-pages -d dist",
     "test": "node --test"

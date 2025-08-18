@@ -217,7 +217,7 @@ body {
       margin-bottom: 20px;
       align-items: center;
     }
-  } 
+  }
   .bouncing-arrow {
     text-align: center;
     margin-top: 20px;
@@ -1000,14 +1000,37 @@ div#aw-footer {
     border-left: 10px solid var(--aw-orange);
   }
 
-
-
   .row {
     --bs-gutter-y: 1.5rem;
+  }
+  .accordion {
+    h2 > button {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: var(--font-color);
+      background-color: var(--alternate-bg);
+      border: none;
+      border-radius: 0;
+      padding: 1rem 1.5rem;
+
+      &::after {
+        @media (prefers-color-scheme: dark) {
+          filter: invert(100%);
+        }
+      }
+    }
+
+    .accordion-body {
+      padding: 1rem 1.5rem;
+      background-color: var(--alternate-bg);
+      color: var(--font-color);
+    }
   }
 }
 
 #article-list {
+  margin-top: 5vh;
+  margin-bottom: 20vh;
   .card {
     background: var(--alternate-bg);
 
@@ -1016,17 +1039,12 @@ div#aw-footer {
     height: 100%;
     padding: 0px;
 
-
-
-
     .card-body {
       display: flex;
       flex-direction: row;
       gap: 1rem;
       padding: 0px;
 
-      
-      
       .card-body-content {
         display: flex;
         flex-direction: column;
@@ -1058,15 +1076,13 @@ div#aw-footer {
           font-weight: normal;
           display: block;
         }
-    &:hover {
-      background-position: 100% 0%;
+        &:hover {
+          background-position: 100% 0%;
 
-    cursor: pointer;
-    }
-       
+          cursor: pointer;
+        }
       }
-  }
-      
+    }
 
     .card-title {
       font-size: 1.25rem;
