@@ -84,98 +84,101 @@ export async function getStaticPaths() {
   <h3>Questions</h3>
   <div class="accordion accordion-flush" id="questionsAccordion">
     {
-      nRandItems([
-        {
-          question:
-            "What makes Alton Computer Solutions the best choice for IT support in Seattle?",
-          answer:
-            "Alton Computer Solutions specializes in small business IT support, offering responsive service, predictable pricing, and personalized solutions. Unlike larger providers, we focus on building relationships with Seattle businesses to ensure technology drives growth instead of creating stress.",
-        },
-        {
-          question:
-            "How do our MSP services help Seattle small businesses save money compared to hiring in-house IT staff?",
-          answer:
-            "Hiring a full-time IT employee can cost upwards of $70,000 annually, plus benefits. Our MSP services provide the same expertise—often broader—for a fraction of the cost. You get 24/7 monitoring, unlimited support, and a full team of professionals at a predictable monthly rate.",
-        },
-        {
-          question:
-            "What’s included in our flat-rate IT support pricing for small businesses?",
-          answer:
-            "Our flat-rate plans cover unlimited remote support, on-site visits when needed, proactive monitoring, patch management, cybersecurity tools, and strategic IT planning. This eliminates surprise costs and helps small businesses budget IT expenses more effectively.",
-        },
-        {
-          question:
-            "Why is switching to a managed service provider (MSP) more cost-effective than break-fix IT support?",
-          answer:
-            "Break-fix IT support may seem cheaper upfront, but it leads to more downtime and unexpected bills where every problem is an emergency. As an MSP, we prevent issues before they happen and are alerted to any problems, saving businesses time and money.",
-        },
-        {
-          question:
-            "How do we ensure predictable monthly IT costs for Seattle small businesses?",
-          answer:
-            "Our MSP model is built on flat-rate, subscription-based pricing. That means no hourly surprises, no hidden fees—just one predictable monthly payment that covers all of your IT support and maintenance needs.",
-        },
-        {
-          question:
-            "What benefits do Seattle businesses gain by outsourcing IT to Alton Computer Solutions?",
-          answer:
-            "Small businesses gain peace of mind, access to enterprise-grade technology, stronger cybersecurity protections, and faster problem resolution. This allows business owners and employees to focus on growth rather than technical frustrations.",
-        },
-        {
-          question:
-            "How can our proactive IT monitoring reduce downtime and improve productivity for small teams?",
-          answer:
-            "We monitor systems 24/7 to catch potential issues before they impact operations. This reduces downtime, keeps employees working without interruptions, and ensures that your IT infrastructure runs smoothly at all times.",
-        },
-        {
-          question:
-            "Why is our customer-focused support model better than larger, less personalized MSPs in Seattle?",
-          answer:
-            "Larger providers often treat small businesses as just another account. We take the opposite approach by providing dedicated support, quick response times, and custom solutions tailored specifically to your business goals.",
-        },
-        {
-          question:
-            "What security protections are included in our MSP packages for small businesses?",
-          answer:
-            "Our plans include antivirus, firewall management, email security, ransomware protection, and employee training. We ensure Seattle businesses stay compliant and protected against evolving cyber threats.",
-        },
-        {
-          question:
-            "How does our IT support pricing compare to other Seattle managed service providers?",
-          answer:
-            "We provide enterprise-level support at small business-friendly pricing. Our plans are competitive, transparent, and designed specifically for SMBs, meaning you only pay for what you need—without inflated costs.",
-        },
-        {
-          question:
-            "What makes switching to Alton Computer Solutions worth it for long-term business growth?",
-          answer:
-            "We don’t just fix problems—we align IT with your business strategy. This means better scalability, reduced costs, stronger security, and technology that supports your growth every step of the way.",
-        },
-        {
-          question:
-            "How do we tailor our IT services specifically to the needs of small businesses in Seattle?",
-          answer:
-            "Unlike generic IT providers, we specialize in small business networks, budgets, and compliance requirements. Our packages are flexible, so whether you have 5 or 50 employees, we deliver the right-sized IT solutions.",
-        },
-        {
-          question:
-            "Why is proactive IT support better than waiting for problems to happen?",
-          answer:
-            "Proactive support prevents downtime, data loss, and costly emergency repairs. By addressing issues before they escalate, we keep your business running smoothly and your employees productive.",
-        },
-        {
-          question:
-            "How can Alton Computer Solutions help Seattle businesses scale their IT affordably as they grow?",
-          answer:
-            "Our solutions are built for scalability. Whether you’re hiring new staff, opening another office, or adding new technology, we provide cost-effective upgrades that grow with your business.",
-        },
-        {
-          question:
-            "What hidden costs can businesses avoid by partnering with us for IT support?",
-          answer:
-            "Businesses often overlook costs like downtime, lost productivity, data breaches, and emergency repair bills. Our flat-rate pricing eliminates these surprises and ensures your IT is an asset—not a liability.",
-        },
-      ], 7).map((item, idx) => (
+      nRandItems(
+        [
+          {
+            question:
+              "What makes Alton Computer Solutions the best choice for IT support in Seattle?",
+            answer:
+              "Alton Computer Solutions specializes in small business IT support, offering responsive service, predictable pricing, and personalized solutions. Unlike larger providers, we focus on building relationships with Seattle businesses to ensure technology drives growth instead of creating stress.",
+          },
+          {
+            question:
+              "How do our MSP services help Seattle small businesses save money compared to hiring in-house IT staff?",
+            answer:
+              "Hiring a full-time IT employee can cost upwards of $70,000 annually, plus benefits. Our MSP services provide the same expertise—often broader—for a fraction of the cost. You get 24/7 monitoring, unlimited support, and a full team of professionals at a predictable monthly rate.",
+          },
+          {
+            question:
+              "What’s included in our flat-rate IT support pricing for small businesses?",
+            answer:
+              "Our flat-rate plans cover unlimited remote support, on-site visits when needed, proactive monitoring, patch management, cybersecurity tools, and strategic IT planning. This eliminates surprise costs and helps small businesses budget IT expenses more effectively.",
+          },
+          {
+            question:
+              "Why is switching to a managed service provider (MSP) more cost-effective than break-fix IT support?",
+            answer:
+              "Break-fix IT support may seem cheaper upfront, but it leads to more downtime and unexpected bills where every problem is an emergency. As an MSP, we prevent issues before they happen and are alerted to any problems, saving businesses time and money.",
+          },
+          {
+            question:
+              "How do we ensure predictable monthly IT costs for Seattle small businesses?",
+            answer:
+              "Our MSP model is built on flat-rate, subscription-based pricing. That means no hourly surprises, no hidden fees—just one predictable monthly payment that covers all of your IT support and maintenance needs.",
+          },
+          {
+            question:
+              "What benefits do Seattle businesses gain by outsourcing IT to Alton Computer Solutions?",
+            answer:
+              "Small businesses gain peace of mind, access to enterprise-grade technology, stronger cybersecurity protections, and faster problem resolution. This allows business owners and employees to focus on growth rather than technical frustrations.",
+          },
+          {
+            question:
+              "How can our proactive IT monitoring reduce downtime and improve productivity for small teams?",
+            answer:
+              "We monitor systems 24/7 to catch potential issues before they impact operations. This reduces downtime, keeps employees working without interruptions, and ensures that your IT infrastructure runs smoothly at all times.",
+          },
+          {
+            question:
+              "Why is our customer-focused support model better than larger, less personalized MSPs in Seattle?",
+            answer:
+              "Larger providers often treat small businesses as just another account. We take the opposite approach by providing dedicated support, quick response times, and custom solutions tailored specifically to your business goals.",
+          },
+          {
+            question:
+              "What security protections are included in our MSP packages for small businesses?",
+            answer:
+              "Our plans include antivirus, firewall management, email security, ransomware protection, and employee training. We ensure Seattle businesses stay compliant and protected against evolving cyber threats.",
+          },
+          {
+            question:
+              "How does our IT support pricing compare to other Seattle managed service providers?",
+            answer:
+              "We provide enterprise-level support at small business-friendly pricing. Our plans are competitive, transparent, and designed specifically for SMBs, meaning you only pay for what you need—without inflated costs.",
+          },
+          {
+            question:
+              "What makes switching to Alton Computer Solutions worth it for long-term business growth?",
+            answer:
+              "We don’t just fix problems—we align IT with your business strategy. This means better scalability, reduced costs, stronger security, and technology that supports your growth every step of the way.",
+          },
+          {
+            question:
+              "How do we tailor our IT services specifically to the needs of small businesses in Seattle?",
+            answer:
+              "Unlike generic IT providers, we specialize in small business networks, budgets, and compliance requirements. Our packages are flexible, so whether you have 5 or 50 employees, we deliver the right-sized IT solutions.",
+          },
+          {
+            question:
+              "Why is proactive IT support better than waiting for problems to happen?",
+            answer:
+              "Proactive support prevents downtime, data loss, and costly emergency repairs. By addressing issues before they escalate, we keep your business running smoothly and your employees productive.",
+          },
+          {
+            question:
+              "How can Alton Computer Solutions help Seattle businesses scale their IT affordably as they grow?",
+            answer:
+              "Our solutions are built for scalability. Whether you’re hiring new staff, opening another office, or adding new technology, we provide cost-effective upgrades that grow with your business.",
+          },
+          {
+            question:
+              "What hidden costs can businesses avoid by partnering with us for IT support?",
+            answer:
+              "Businesses often overlook costs like downtime, lost productivity, data breaches, and emergency repair bills. Our flat-rate pricing eliminates these surprises and ensures your IT is an asset—not a liability.",
+          },
+        ],
+        7
+      ).map((item, idx) => (
         <div class="accordion-item">
           <h2 class="accordion-header" id={`heading${idx}`}>
             <button
