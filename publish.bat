@@ -23,13 +23,6 @@ where git >nul 2>nul || (
 
 )
 
-where gh >nul 2>nul || (
-    CALL choco install gh --version 2.76.2 -y
-    if errorlevel 1 (
-        echo GitHub CLI installation failed.
-        exit /b 1
-    )
-)
 
 REM Install dependencies
 echo Installing dependencies...
