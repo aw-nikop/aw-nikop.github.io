@@ -2,7 +2,8 @@
 title: "Why You Should Get A Firewall | Altonworks"
 description: "Why you should have a firewall for your business? Alton Computer Solutions provides firewall solutions to protect your business from cyber threats. Our firewalls with VPN offer robust security and secure remote access."
 author: "Chris Alton"
-date: "2025-08-15"
+publishDate: "2019-07-22"
+updatedDate: ""
 ---
 
 # Firewall: Modern-Day Moats

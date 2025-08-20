@@ -2,7 +2,8 @@
 title: "Recycling Computer Hardware | Altonworks"
 description: "How your business can recycle computer equipment."
 author: "Chris Alton"
-date: "2025-08-15"
+publishDate: "2024-10-17"
+updatedDate: ""
 ---
 
 # How Your Business Can Recycle Computer Equipment

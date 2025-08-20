@@ -6,7 +6,7 @@ import Modal from "../components/Modal.astro";
 import Banner from "../components/Banner.astro";
 import main from "../main.js?url";
 import "../styles.scss";
-const { title, description } = Astro.props;
+const { title, description, jsonLd } = Astro.props;
 ---
 
 <!doctype html>
@@ -33,6 +33,9 @@ const { title, description } = Astro.props;
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"></script>
+    {jsonLd && (
+      <script type="application/ld+json" set:html={JSON.stringify(jsonLd) } />
+    )}
     <slot name="head" />
   </head>
   <body>

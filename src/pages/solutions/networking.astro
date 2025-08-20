@@ -1,15 +1,38 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://altoncomputersolutions.com/solutions/networking/#service",
+  name: "Networking Support for Businesses",
+  serviceType:
+    "Network equipment, setup, troubleshooting, maintenance, customized solutions",
+  provider: { "@id": "https://altoncomputersolutions.com/#org" },
+  areaServed: "Seattle, WA",
+  audience: {
+    "@type": "BusinessAudience",
+    name: "Businesses",
+  },
+  description:
+    "Networking hardware and support for Seattle businesses, including equipment supply, setup, troubleshooting, and tailored solutions.",
+};
 ---
-<BaseLayout title="Network Support | Altonworks" description="Need network support in Seattle? Alton Computer Solutions provides networking hardware and support to keep your business connected and efficient.">
+
+<BaseLayout
+  title="Network Support | Altonworks"
+  jsonLd={jsonLd}
+  description="Need network support in Seattle? Alton Computer Solutions provides networking hardware and support to keep your business connected and efficient."
+>
   <section id="solutions-body">
     <div id="hero">
-      <h1> Networking </h1>
+      <h1>Networking</h1>
       <span class="orange-border"></span>
     </div>
     <section>
       <p>
-        Need networking support? Alton Computer Solutions provides a range of networking hardware and support to ensure your business stays connected and efficient.
+        Need networking support? Alton Computer Solutions provides a range of
+        networking hardware and support to ensure your business stays connected
+        and efficient.
       </p>
       <div class="row flex-column flex-sm-row">
         <div class="col">
@@ -19,7 +42,10 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             </div>
             <div class="card-body">
               <h5 class="card-title">Network Equipment and Setup</h5>
-              <p class="card-text">We supply and configure network switches, routers, racks, and wireless systems to ensure seamless connectivity.</p>
+              <p class="card-text">
+                We supply and configure network switches, routers, racks, and
+                wireless systems to ensure seamless connectivity.
+              </p>
             </div>
           </div>
         </div>
@@ -30,7 +56,10 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             </div>
             <div class="card-body">
               <h5 class="card-title">Troubleshooting and Maintenance</h5>
-              <p class="card-text">Our team is ready to diagnose and resolve network issues promptly, minimizing downtime.</p>
+              <p class="card-text">
+                Our team is ready to diagnose and resolve network issues
+                promptly, minimizing downtime.
+              </p>
             </div>
           </div>
         </div>
@@ -41,13 +70,19 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             </div>
             <div class="card-body">
               <h5 class="card-title">Customized Solutions</h5>
-              <p class="card-text">We tailor our networking services to fit the unique requirements of your business, whether it’s a small office or a large enterprise.</p>
+              <p class="card-text">
+                We tailor our networking services to fit the unique requirements
+                of your business, whether it’s a small office or a large
+                enterprise.
+              </p>
             </div>
           </div>
         </div>
       </div>
       <p>
-        At Alton Computer Solutions, we understand the importance of a reliable network in powering your business operations. Trust us to keep you connected.
+        At Alton Computer Solutions, we understand the importance of a reliable
+        network in powering your business operations. Trust us to keep you
+        connected.
       </p>
     </section>
   </section>

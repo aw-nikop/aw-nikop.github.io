@@ -1,15 +1,38 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://altoncomputersolutions.com/solutions/firewall/#service",
+  name: "Firewall and VPN Solutions",
+  serviceType: "Firewall installation, VPN setup, network security",
+  provider: { "@id": "https://altoncomputersolutions.com/#org" },
+  areaServed: "Seattle, WA",
+  audience: {
+    "@type": "BusinessAudience",
+    name: "Small businesses",
+  },
+  description:
+    "Firewall and VPN services for Seattle SMBs, including secure remote access, traffic monitoring, and malware protection.",
+};
 ---
-<BaseLayout title="Firewall and VPN | Altonworks" description="Alton Computer Solutions provides firewall solutions to protect your business from cyber threats. Our firewalls with VPN offer robust security and secure remote access.">
+
+<BaseLayout
+  jsonLd={jsonLd}
+  title="Firewall and VPN | Altonworks"
+  description="Alton Computer Solutions provides firewall solutions to protect your business from cyber threats. Our firewalls with VPN offer robust security and secure remote access."
+>
   <section id="solutions-body">
     <div id="hero">
-      <h1> Firewalls with VPN </h1>
+      <h1>Firewalls with VPN</h1>
       <span class="orange-border"></span>
     </div>
     <section>
       <p>
-        Protecting your business from cyber threats is essential, and our firewall solutions are designed to provide robust security. Alton Computer Solutions is here to recommend, implement, and maintain firewalls that best suit your business needs and internet speeds.
+        Protecting your business from cyber threats is essential, and our
+        firewall solutions are designed to provide robust security. Alton
+        Computer Solutions is here to recommend, implement, and maintain
+        firewalls that best suit your business needs and internet speeds.
       </p>
       <div class="row flex-column flex-sm-row">
         <div class="col">
@@ -19,7 +42,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             </div>
             <div class="card-body">
               <h5 class="card-title">Subscription-Based Security</h5>
-              <p class="card-text">Firewalls with built-in services to prevent viruses and malware.</p>
+              <p class="card-text">
+                Firewalls with built-in services to prevent viruses and malware.
+              </p>
             </div>
           </div>
         </div>
@@ -30,7 +55,10 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             </div>
             <div class="card-body">
               <h5 class="card-title">Internet Traffic Monitoring</h5>
-              <p class="card-text">We monitor data traffic to and from your business, ensuring safe connections.</p>
+              <p class="card-text">
+                We monitor data traffic to and from your business, ensuring safe
+                connections.
+              </p>
             </div>
           </div>
         </div>
@@ -41,13 +69,17 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             </div>
             <div class="card-body">
               <h5 class="card-title">VPN Setup and Management</h5>
-              <p class="card-text">We offer point-to-point and client VPN solutions for secure remote access.</p>
+              <p class="card-text">
+                We offer point-to-point and client VPN solutions for secure
+                remote access.
+              </p>
             </div>
           </div>
         </div>
       </div>
       <p>
-        With Alton Computer Solutions, you can rest assured your business is protected from cyber threats with reliable, tailored firewall solutions.
+        With Alton Computer Solutions, you can rest assured your business is
+        protected from cyber threats with reliable, tailored firewall solutions.
       </p>
     </section>
   </section>

@@ -2,7 +2,8 @@
 title: "Remote Desktop Solutions for Remote Workers | Altonworks"
 description: "We had the know-how and infrastructure to get everyone setup and new services offered by Microsoft, specifically Windows 365 Cloud PC has become reality."
 author: "Chris Alton"
-date: "2025-08-15"
+publishDate: "2024-10-18"
+updatedDate: ""
 ---
 
 # Remote Desktop Solutions for Working Remotely

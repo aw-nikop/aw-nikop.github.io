@@ -1,11 +1,26 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://altoncomputersolutions.com/solutions/automation/#service",
+  "name": "Automation and Integration for Small Businesses",
+  "serviceType": "Custom automation, workflow integration, process optimization",
+  "provider": {"@id": "https://altoncomputersolutions.com/#org"},
+  "areaServed": "Seattle, WA",
+  "audience": {
+    "@type": "BusinessAudience",
+    "name": "Small businesses"
+  },
+  "description": "Custom automation and integration solutions for Seattle SMBs to streamline operations, boost productivity, and connect business systems.",
+}
 ---
 
 <BaseLayout
   title="Automation | Altonworks"
   description="Alton Computer Solutions offers custom software solutions that streamline operations, enhance productivity, and provide a competitive edge in the market."
->
+  jsonLd={jsonLd}
+  >
   <section id="solutions-body">
     <div id="hero">
       <h1>Automation and Integration</h1>

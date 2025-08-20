@@ -2,7 +2,8 @@
 title: "3 Cybersecurity Tips For Small Businesses | Altonworks"
 description: "Many small businesses aren’t large enough to have a dedicated on-site IT staff and don’t know where to begin in protecting their business from cybersecurity threats."
 author: "Chris Alton"
-date: "2025-08-15"
+publishDate: "2024-10-17"
+updatedDate: ""
 ---
 
 # Cybersecurity Tips to Protect Your Small Business
@@ -49,3 +50,4 @@ Here is a list of what we recommend and can implement for our customers:
 Cybercrime will always be a threat to businesses of all sizes but being educated about the dangers and having a solid plan in place will help you be better prepared.
 
 If you don’t have a secure plan in place for your business, we can help. Contact us at [(206) 782-4035](tel:(206)782-4035) or go to our website and complete our [online form](/#services-contact) to set up a consultation.
+

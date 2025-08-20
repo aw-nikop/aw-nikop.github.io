@@ -1,15 +1,38 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://altoncomputersolutions.com/solutions/backup/#service",
+  name: "Backup and Disaster Recovery",
+  serviceType: "Managed backup, disaster recovery, ransomware protection",
+  provider: { "@id": "https://altoncomputersolutions.com/#org" },
+  areaServed: "Seattle, WA",
+  audience: {
+    "@type": "BusinessAudience",
+    name: "Small businesses",
+  },
+  description:
+    "Fully managed backup and disaster recovery solutions for Seattle SMBs, including monitoring, testing, and ransomware protection.",
+};
 ---
-<BaseLayout title="Backup and Recovery | Altonworks" description="Alton Computer Solutions provides fully managed backup and disaster recovery solutions to protect your critical data.">
+
+<BaseLayout
+  jsonLd={jsonLd}
+  title="Backup and Recovery | Altonworks"
+  description="Alton Computer Solutions provides fully managed backup and disaster recovery solutions to protect your critical data."
+>
   <section id="solutions-body">
     <div id="hero">
-      <h1> Backup and Disaster Recovery Plans </h1>
+      <h1>Backup and Disaster Recovery Plans</h1>
       <span class="orange-border"></span>
     </div>
     <section>
       <p>
-        Data loss can cripple a business. At Alton Computer Solutions, we provide fully managed backup and disaster recovery solutions to protect your critical data. With our local presence, we ensure hands-on support to keep your backups healthy and reliable.
+        Data loss can cripple a business. At Alton Computer Solutions, we
+        provide fully managed backup and disaster recovery solutions to protect
+        your critical data. With our local presence, we ensure hands-on support
+        to keep your backups healthy and reliable.
       </p>
       <div class="row flex-column flex-sm-row">
         <div class="col">
@@ -19,7 +42,10 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             </div>
             <div class="card-body">
               <h5 class="card-title">Comprehensive Protection</h5>
-              <p class="card-text">Safeguard data stored on workstations, servers, and the cloud through Microsoft 365.</p>
+              <p class="card-text">
+                Safeguard data stored on workstations, servers, and the cloud
+                through Microsoft 365.
+              </p>
             </div>
           </div>
         </div>
@@ -30,7 +56,10 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             </div>
             <div class="card-body">
               <h5 class="card-title">Continuous Monitoring and Testing</h5>
-              <p class="card-text">We regularly monitor and test backups to ensure data integrity and readiness for recovery.</p>
+              <p class="card-text">
+                We regularly monitor and test backups to ensure data integrity
+                and readiness for recovery.
+              </p>
             </div>
           </div>
         </div>
@@ -41,13 +70,18 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             </div>
             <div class="card-body">
               <h5 class="card-title">Ransomware Protection</h5>
-              <p class="card-text">Our solutions are designed to prevent data loss due to ransomware attacks.</p>
+              <p class="card-text">
+                Our solutions are designed to prevent data loss due to
+                ransomware attacks.
+              </p>
             </div>
           </div>
         </div>
       </div>
       <p>
-        When it comes to protecting your business data, trust Alton Computer Solutions to deliver peace of mind through proactive backup and disaster recovery planning.
+        When it comes to protecting your business data, trust Alton Computer
+        Solutions to deliver peace of mind through proactive backup and disaster
+        recovery planning.
       </p>
     </section>
   </section>

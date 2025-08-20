@@ -41,6 +41,32 @@ function nRandItems(collection, n, exclude = null) {
   return shuffled.slice(0, n);
 }
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": `https://altoncomputersolutions.com/altons-articles/${article.slug}/#post`,
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": `https://altoncomputersolutions.com/altons-articles/${article.slug}/`,
+  },
+  headline: article.data.title,
+  description: article.data.description,
+  image: ["https://altoncomputersolutions.com/favicon.ico"],
+  datePublished: article.data.publishDate,
+  dateModified: article.data.updatedDate || article.data.publishDate,
+  author: {
+    "@type": "Person",
+    name: article.data.author,
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": "https://altoncomputersolutions.com/#org",
+  },
+  articleSection: "IT Support",
+  keywords: ["Seattle IT support", "cybersecurity", "small business"],
+  inLanguage: "en-US",
+};
+
 export async function getStaticPaths() {
   const allArticles = await getCollection("articles");
   return allArticles.map((article) => ({
@@ -51,15 +77,18 @@ export async function getStaticPaths() {
 ---
 
 <ArticleLayout
-  title={article
-    ? `${article.data.title} | Altonworks`
-    : "Article not found | Altonworks"}
+  title={article ? `${article.data.title}` : "Article not found | Altonworks"}
   description={article ? article.data.description : "Article not found."}
+  jsonLd={jsonLd}
 >
   {
     article ? (
       <div class="prose prose-lg max-w-none">
         <article id="" set:html={article.body} />
+        <p class="text-muted text-sm">
+          Last updated:
+          {article.data.updatedDate || article.data.publishDate}
+        </p>
       </div>
     ) : (
       <h2>Article not found.</h2>

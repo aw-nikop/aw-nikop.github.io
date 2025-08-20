@@ -1,10 +1,63 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
+      "@id": "https://altoncomputersolutions.com/#org",
+      name: "Alton Computer Solutions",
+      url: "https://altoncomputersolutions.com/",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://altoncomputersolutions.com/favicon.ico",
+      },
+      image: "https://altoncomputersolutions.com/cropped-logo-black.webp",
+      description:
+        "Managed IT support and cybersecurity for small businesses in Seattle.",
+      telephone: "206-782-4035",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "4209 21st Ave W #200",
+        addressLocality: "Seattle",
+        addressRegion: "WA",
+        postalCode: "98199",
+        addressCountry: "US",
+      },
+      areaServed: {
+        "@type": "City",
+        name: "Seattle",
+      },
+      sameAs: [
+        "https://www.linkedin.com/company/alton-computer-solutions/",
+        "https://www.facebook.com/AltonNetworking",
+      ],
+      contactPoint: [
+        {
+          "@type": "ContactPoint",
+          telephone: "206-782-4035",
+          contactType: "customer support",
+          areaServed: "US",
+          availableLanguage: ["en"],
+        },
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://altoncomputersolutions.com/#website",
+      url: "https://altoncomputersolutions.com/",
+      name: "Alton Computer Solutions",
+      publisher: { "@id": "https://altoncomputersolutions.com/#org" },
+      inLanguage: "en-US",
+    },
+  ],
+};
 ---
 
 <BaseLayout
-  title="Altonworks"
+  title="Seattle IT Support For Small Businesses"
   description="Alton Computer Solutions is the outsourced IT provider for Seattle-area businesses. We are up to speed on the latest IT Solutions that work reliability and will not break the bank. We listen to our customers and do not force a one size fits all solution. Instead, we build a computer network around your specific business needs."
+  jsonLd={jsonLd}
 >
   <Fragment slot="head">
     <!-- Google tag (gtag.js) -->
@@ -58,11 +111,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             </div>
           </div>
           <div class="row btn-container">
-              <a
-                href="https://outlook.office365.com/book/AltonworksConsultation@altonworks.com/"
-                target="_blank"
-                class="text-decoration-none btn orange-btn">Book A Meeting</a
-              >
+            <a
+              href="https://outlook.office365.com/book/AltonworksConsultation@altonworks.com/"
+              target="_blank"
+              class="text-decoration-none btn orange-btn">Book A Meeting</a
+            >
           </div>
         </div>
         <div class="img-container">

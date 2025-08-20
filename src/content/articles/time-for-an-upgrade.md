@@ -2,7 +2,8 @@
 title: "When Should You Upgrade A Computer | Altonworks"
 description: "Computers display signs of failing health before flashing the blue screen of death."
 author: "Chris Alton"
-date: "2025-08-15"
+publishDate: "2024-10-17"
+updatedDate: ""
 ---
 
 # Time for an Upgrade

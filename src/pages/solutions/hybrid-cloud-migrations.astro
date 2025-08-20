@@ -1,15 +1,40 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id":
+    "https://altoncomputersolutions.com/solutions/hybrid-cloud-migrations/#service",
+  name: "Hybrid Cloud Migrations",
+  serviceType:
+    "Hybrid cloud migration, on-premises server integration, cloud optimization",
+  provider: { "@id": "https://altoncomputersolutions.com/#org" },
+  areaServed: "Seattle, WA",
+  audience: {
+    "@type": "BusinessAudience",
+    name: "Small businesses",
+  },
+  description:
+    "Seamless migration from on-premises servers to hybrid cloud environments for Seattle SMBs, including integration, optimization, and ongoing support.",
+};
 ---
-<BaseLayout title="Cloud Migrations | Altonworks" description="Alton Computer Solutions helps Seattle businesses migrate from on-premises servers to hybrid cloud environments.">
+
+<BaseLayout
+  jsonLd={jsonLd}
+  title="Cloud Migrations | Altonworks"
+  description="Alton Computer Solutions helps Seattle businesses migrate from on-premises servers to hybrid cloud environments."
+>
   <section id="solutions-body">
     <div id="hero">
-      <h1> Hybrid Cloud Migrations </h1>
+      <h1>Hybrid Cloud Migrations</h1>
       <span class="orange-border"></span>
     </div>
     <section>
       <p>
-        Many businesses require a mix of on-premises and cloud solutions. Alton Computer Solutions specializes in setting up and maintaining hybrid cloud environments, integrating on-site servers with cloud systems for optimal performance and security.
+        Many businesses require a mix of on-premises and cloud solutions. Alton
+        Computer Solutions specializes in setting up and maintaining hybrid
+        cloud environments, integrating on-site servers with cloud systems for
+        optimal performance and security.
       </p>
       <div class="row flex-column flex-sm-row">
         <div class="col">
@@ -18,8 +43,13 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
               <i class="bi bi-hdd-rack"></i>
             </div>
             <div class="card-body">
-              <h5 class="card-title">On-Premises Server Setup and Maintenance</h5>
-              <p class="card-text">For businesses handling highly sensitive data, we ensure your on-site servers operate seamlessly.</p>
+              <h5 class="card-title">
+                On-Premises Server Setup and Maintenance
+              </h5>
+              <p class="card-text">
+                For businesses handling highly sensitive data, we ensure your
+                on-site servers operate seamlessly.
+              </p>
             </div>
           </div>
         </div>
@@ -30,7 +60,10 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             </div>
             <div class="card-body">
               <h5 class="card-title">Cloud Integration</h5>
-              <p class="card-text">We link less sensitive data to secure cloud platforms, creating a balanced and efficient hybrid environment.</p>
+              <p class="card-text">
+                We link less sensitive data to secure cloud platforms, creating
+                a balanced and efficient hybrid environment.
+              </p>
             </div>
           </div>
         </div>
@@ -41,13 +74,18 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             </div>
             <div class="card-body">
               <h5 class="card-title">Performance Optimization</h5>
-              <p class="card-text">Our hybrid cloud solutions are designed to deliver the best of both worlds—local control and cloud scalability.</p>
+              <p class="card-text">
+                Our hybrid cloud solutions are designed to deliver the best of
+                both worlds—local control and cloud scalability.
+              </p>
             </div>
           </div>
         </div>
       </div>
       <p>
-        Alton Computer Solutions bridges the gap between on-premises and cloud systems, ensuring your hybrid environment runs smoothly and efficiently, so your business thrives.
+        Alton Computer Solutions bridges the gap between on-premises and cloud
+        systems, ensuring your hybrid environment runs smoothly and efficiently,
+        so your business thrives.
       </p>
     </section>
   </section>

@@ -2,7 +2,8 @@
 title: "5 Outlook Email Features I Love | Altonworks"
 description: "Insider tips for Outlook email features."
 author: "Chris Alton"
-date: "2025-08-15"
+publishDate: "2019-02-27"
+updatedDate: ""
 ---
 
 # Insider Tips: 5 Outlook Email Features That I Love

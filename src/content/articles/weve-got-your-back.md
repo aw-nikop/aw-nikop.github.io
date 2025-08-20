@@ -2,7 +2,8 @@
 title: "Backing Up Your Data | Altonworks"
 description: "If you mistakenly download a virus, your data could get encrypted and held for ransom."
 author: "Chris Alton"
-date: "2025-08-15"
+publishDate: "2019-05-22"
+updatedDate: ""
 ---
 
 # We’ve Got Your Back

@@ -2,7 +2,8 @@
 title: "Holiday e-Commerce Tips For Small Businesses | Altonworks"
 description: "Recent data suggests that cart abandonment during checkout happens about 69% of the time."
 author: "Chris Alton"
-date: "2025-08-15"
+publishDate: "2024-10-17"
+updatedDate: ""
 ---
 
 # Preparing Your Small Business for e-Commerce During the Holidays

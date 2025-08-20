@@ -2,7 +2,8 @@
 title: "Beware of Cybercriminal Attempts | Altonworks"
 description: "The truth: cybercrime cost the world economy more than $450 billion in 2016."
 author: "Chris Alton"
-date: "2025-08-15"
+publishDate: "2019-05-06"
+updatedDate: ""
 ---
 
 # Beware of Cybercriminal Attempts
@@ -19,3 +20,4 @@ On your computer, it might be easier to tell this email isn’t from your boss. 
 Malware pop-ups are also designed to be easy to click. Malware is the nickname for malicious software, meaning software that is created with evil intentions. That pop-up that you click-on thanks to your smart phone’s screen size might be malware. Perhaps you’ve heard of malware pop-ups that fill up your entire screen, even speaking to you. Call me if your computer screen asks you to call someone!
 
 Cybercrime isn’t going away because it works for the criminal. My favorite forms of protection for my clients is Webroot antivirus software and WatchGuard firewalls. We also set up extra protection for our business clients’ email servers, too. We’ll continue to keep informed on these criminals’ latest techniques; it’s our job to help prevent and minimize cybercrime. Think of it as security, like buying locks for your doors, bars for your windows and an alarm system. Your business needs to be a well-guarded fort in the wild, also known as the Internet.
+

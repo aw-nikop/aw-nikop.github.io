@@ -2,7 +2,8 @@
 title: "Automating Daily Tasks | Altonworks"
 description: "We all have repetitive computing tasks that we dread. Maybe it is invoicing, patient intake forms, copy/pasting excel rows from one sheet to another, or updating inventory. It’s not a perplexing task, it’s just tiresome. You can’t help but wonder, “isn’t there a way to make this go faster?”"
 author: "Niko Permilovsky"
-date: "2025-08-15"
+publishDate: "2025-04-15"
+updatedDate: "2025-04-15"
 ---
 
 # How Alton Computer Solutions Automated Daily, Tedious Tasks

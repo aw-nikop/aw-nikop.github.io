@@ -1,15 +1,36 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://altoncomputersolutions.com/solutions/cybersecurity/#service",
+  name: "Cybersecurity for Small Businesses",
+  serviceType: "Managed cybersecurity, phishing protection, endpoint security",
+  provider: { "@id": "https://altoncomputersolutions.com/#org" },
+  areaServed: "Seattle, WA",
+  audience: {
+    "@type": "BusinessAudience",
+    name: "Small businesses",
+  },
+  description:
+    "End-to-end cybersecurity for Seattle SMBs including monitoring, incident response, and employee training.",
+};
 ---
-<BaseLayout title="Cybersecurity | Altonworks" description="Alton Computer Solutions helps businesses identify and address security vulnerabilities.">
+
+<BaseLayout
+  jsonLd={jsonLd}
+  title="Cybersecurity | Altonworks"
+  description="Alton Computer Solutions helps businesses identify and address security vulnerabilities."
+>
   <section id="solutions-body">
     <div id="hero">
-      <h1> Cybersecurity and Compliance </h1>
+      <h1>Cybersecurity and Compliance</h1>
       <span class="orange-border"></span>
     </div>
     <section>
       <p>
-        Cybersecurity is more critical than ever. Alton Computer Solutions helps businesses identify and address security vulnerabilities.
+        Cybersecurity is more critical than ever. Alton Computer Solutions helps
+        businesses identify and address security vulnerabilities.
       </p>
       <div class="row flex-column flex-sm-row">
         <div class="col">
@@ -19,7 +40,10 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             </div>
             <div class="card-body">
               <h5 class="card-title">Security Controls Implementation</h5>
-              <p class="card-text">We review and implement the necessary measures to secure your business.</p>
+              <p class="card-text">
+                We review and implement the necessary measures to secure your
+                business.
+              </p>
             </div>
           </div>
         </div>
@@ -30,7 +54,10 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             </div>
             <div class="card-body">
               <h5 class="card-title">CISA and CSET Assessments</h5>
-              <p class="card-text">Identify, protect, detect, respond, and recover with our detailed evaluations and remediation plans.</p>
+              <p class="card-text">
+                Identify, protect, detect, respond, and recover with our
+                detailed evaluations and remediation plans.
+              </p>
             </div>
           </div>
         </div>
@@ -41,13 +68,18 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             </div>
             <div class="card-body">
               <h5 class="card-title">Cybersecurity Performance Goals</h5>
-              <p class="card-text">We provide CISA’s CPG assessment and checklist to help you stay compliant and secure.</p>
+              <p class="card-text">
+                We provide CISA’s CPG assessment and checklist to help you stay
+                compliant and secure.
+              </p>
             </div>
           </div>
         </div>
       </div>
       <p>
-        Partner with Alton Computer Solutions for cybersecurity solutions that not only protect your business but also ensure compliance with industry standards.
+        Partner with Alton Computer Solutions for cybersecurity solutions that
+        not only protect your business but also ensure compliance with industry
+        standards.
       </p>
     </section>
   </section>

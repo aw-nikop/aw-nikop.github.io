@@ -2,11 +2,13 @@
 title: "Outsourcing Your IT | Altonworks"
 description: "The median salary for IT support employees with similar experience to ours (15+ years) is 83k/yr according to Glassdoor."
 author: "Niko Permilovsky"
-date: "2025-08-15"
+publishDate: "2025-05-20"
+updatedDate: ""
 ---
 
 # Why you should outsource your IT as a small business
-*By Niko Permilovsky*
+
+_By Niko Permilovsky_
 
 We all have a person that handles our taxes, a bookkeeper, and certainly a lawyer. These people become a part of our lives and an extension of our business. They know how we think, our goals, and our strategy. They have their own lives independent of us. We do not keep them in-house and pay them a salary because it would not make financial sense considering that they work infrequently.
 

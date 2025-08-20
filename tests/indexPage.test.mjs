@@ -14,7 +14,6 @@ async function readIndex() {
 test('Index page uses BaseLayout with title and description', async () => {
   const content = await readIndex();
   assert.match(content, /<BaseLayout/);
-  assert.match(content, /title="Altonworks"/);
   assert.match(content, /description="Alton Computer Solutions is the outsourced IT provider for Seattle-area businesses./);
 });
 

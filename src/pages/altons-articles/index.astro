@@ -1,10 +1,27 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ArticleList from "../../components/ArticleList.astro";
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Alton's Articles",
+  description:
+    "The latest Seattle IT news and tech tips for small businesses from Alton Computer Solutions.",
+  url: Astro.url.href,
+};
 ---
-<BaseLayout title="Altonworks" description="The latest Seattle IT news and tech tips for small businesses from Alton Computer Solutions.">
+
+<BaseLayout
+  jsonLd={jsonLd}
+  title="Altonworks"
+  description="The latest Seattle IT news and tech tips for small businesses from Alton Computer Solutions."
+>
   <div id="hero">
     <h1>Alton's Articles</h1>
   </div>
-  <ArticleList page={Astro.url.searchParams.get('page') ? parseInt(Astro.url.searchParams.get('page')!) : 1} />
+  <ArticleList
+    page={Astro.url.searchParams.get("page")
+      ? parseInt(Astro.url.searchParams.get("page")!)
+      : 1}
+  />
 </BaseLayout>

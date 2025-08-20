@@ -2,7 +2,8 @@
 title: "Deep Dive into Phishing | Altonworks"
 description: "Learn about phishing, impersonation, and spoofing, and how to protect your organization from cybercrime with Altonworks."
 author: "Niko Permilovsky"
-date: "2025-08-15"
+publishDate: "2025-06-01"
+updatedDate: ""
 ---
 
 # Deep dive into Phishing
