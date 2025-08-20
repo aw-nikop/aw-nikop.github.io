@@ -1,53 +1,83 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection } from "astro:content";
 
 const { page = 1 } = Astro.props;
 const PAGE_SIZE = 25;
 
 // Fetch all articles from the "altons-articles" collection
-const articles = await getCollection('articles');
+const articles = await getCollection("articles");
 
 // Pagination logic
 const totalPages = Math.ceil(articles.length / PAGE_SIZE);
-const paginatedArticles = articles.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
+const paginatedArticles = articles.slice(
+  (page - 1) * PAGE_SIZE,
+  page * PAGE_SIZE
+);
 
 function getPageUrl(p) {
-    return `?page=${p}`;
+  return `?page=${p}`;
 }
 ---
 
-<div id="article-list" class="container" >
-    <div class="row row-cols-1 row-cols-md-2 g-4">
-        {paginatedArticles.map(article => (
-            <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="card-body-content">
-                            <h5 class="card-title">{article.data.title.split("|")[0]}</h5>
-                            <p class="card-text">
-                                {article.data.description.length > 200
-                                    ? article.data.description.slice(0, 200) + "..."
-                                    : article.data.description}
-                            </p>
-                        </div>
-                        <a href={`/altons-articles/${article.slug}`} class="card-body-btn"></a>
-
-
-                    </div>
+<div id="article-list" class="container">
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    {
+      paginatedArticles
+        .sort((a, b) => {
+          return (
+            new Date(b.data.updatedDate || b.data.publishDate) -
+            new Date(a.data.updatedDate || a.data.publishDate)
+          );
+        })
+        .map((article) => (
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <div class="card-body-content">
+                  <h2 class="card-title">
+                    {article.data.title.split("|")[0]}{" "}
+                  </h2>
+                  <span class="subtext">
+                    {article.data.author} |{" "}
+                    {new Date(
+                      article.data.updatedDate || article.data.publishDate
+                    ).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </span>
+                  <p class="card-text">
+                    {article.data.description.length > 200
+                      ? article.data.description.slice(0, 200) + "..."
+                      : article.data.description}
+                    <br />
+                  </p>
                 </div>
+                <a
+                  href={`/altons-articles/${article.slug}`}
+                  class="card-body-btn"
+                />
+              </div>
             </div>
-        ))}
-    </div>
+          </div>
+        ))
+    }
+  </div>
 
-    {totalPages > 1 && (
-        <nav aria-label="Page navigation">
-            <ul class="pagination justify-content-center">
-                {Array.from({ length: totalPages }, (_, i) => (
-                    <li class={`page-item${page === i + 1 ? ' active' : ''}`} >
-                        <a class="page-link" href={getPageUrl(i + 1)}>{i + 1}</a>
-                    </li>
-                ))}
-            </ul>
-        </nav>
-    )}
+  {
+    totalPages > 1 && (
+      <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+          {Array.from({ length: totalPages }, (_, i) => (
+            <li class={`page-item${page === i + 1 ? " active" : ""}`}>
+              <a class="page-link" href={getPageUrl(i + 1)}>
+                {i + 1}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    )
+  }
 </div>

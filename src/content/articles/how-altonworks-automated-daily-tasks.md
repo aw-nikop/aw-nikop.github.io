@@ -13,6 +13,8 @@ We all have repetitive computing tasks that we dread. Maybe it is invoicing, pat
 
 Well, there is!
 
+At Alton Computer Solutions, we offer our customers [automation and integration solutions](/solutions/automation) for your business needs.
+
 Here is how we reduced a daily backup check-and-verify task from 30 minutes to instantaneous using Power Automate and a custom website we created.
 
 As part of the [Backup and Disaster Recovery Plan](/solutions/backup) we monitor our customer’s backups to check if successful; and if something went wrong, such as a network error, we investigate and fix it.

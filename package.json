@@ -6,7 +6,6 @@
     "dev": "astro dev --host --port 8080",
     "preview": "astro preview --host --port 8080",
     "build": "astro build",
-    "publish": "gh-pages -d dist",
     "test": "node --test"
   },
   "homepage": "https://aw-nikop.github.io/",

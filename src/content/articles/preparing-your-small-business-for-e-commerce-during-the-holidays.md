@@ -44,6 +44,8 @@ Streamline your checkout process. Recent data suggests that cart abandonment dur
 - Have a one-page checkout process where paying is easy. If you can keep the entire checkout process to one page and offer easy payment options such as ApplePay, PayPal, and Google Wallet, customers are less likely to get frustrated and abandon their purchase.
 - Remove unnecessary distractions. The checkout page is not the time for pop-up ads, or extra banners, etc.
 
+We can help you set this process up! Learn more about our [Automation and Integration service.](/solutions/automation)
+
 ## Pay Attention to How Voice Search Impacts eCommerce
 
 A simple step to take in optimizing your SEO strategy is to try to predict how consumers will ask questions and use the information to create your content and meta data. Instead of keywords shift towards answering questions—such as “What are the best Black Friday deals on laptops?” instead of “Best Black Friday deals on laptops.”

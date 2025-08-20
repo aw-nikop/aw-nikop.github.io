@@ -9,7 +9,7 @@ updatedDate: ""
 # Firewall: Modern-Day Moats
 *By Chris Alton*
 
-In an all good, positive, happy world, no one would be trying to mine or steal your data. But as a computer tech, I can tell you that there are known and unknown threats continually trying to mine your data. That’s why a firewall—an intelligent network security system that keeps your business safe from intruders—is an essential business need.
+In an all good, positive, happy world, no one would be trying to mine or steal your data. But as a computer tech, I can tell you that there are known and unknown threats continually trying to mine your data. That’s why a firewall—an intelligent network security system that keeps your business safe from intruders—is an essential business need. [We can help you set one up!](/solutions/firewall)
 
 Your company’s computer system sits on a huge global computer network that we call the internet. Every day, you exchange packets of information with this network. Think of this firewall as a moat or a fence that keeps people from getting into your business. Internet security threats include (but are not limited to) data mining, viruses, spyware, malware, and phishing.
 

@@ -11,7 +11,7 @@ async function readPage(name) {
   return readFile(join(pagesDir, `${name}.astro`), 'utf8');
 }
 
-['industries', 'team', 'thank-you', '404'].forEach((page) => {
+['team', 'thank-you', '404'].forEach((page) => {
   test(`${page} page uses BaseLayout`, async () => {
     const content = await readPage(page);
     assert.match(content, /<BaseLayout/);

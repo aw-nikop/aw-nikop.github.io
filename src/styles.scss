@@ -1050,6 +1050,10 @@ div#aw-footer {
         flex-direction: column;
         justify-content: center;
         padding: 1.5rem;
+        .subtext {
+          font-size: 0.9rem;
+          color: var(--aw-orange);
+        }
       }
       a.card-body-btn {
         background: linear-gradient(
