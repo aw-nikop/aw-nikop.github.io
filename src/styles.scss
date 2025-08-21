@@ -125,7 +125,15 @@ body {
   z-index: 1000;
   top: 0;
 }
-
+a.link {
+  color: var(--aw-orange);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s;
+  &:hover {
+    border-color: var(--aw-orange);
+  }
+}
 #main-body {
   position: relative;
   min-height: 90vh;
@@ -1115,5 +1123,36 @@ div#aw-footer {
     background-color: var(--aw-orange);
     display: block;
     justify-self: center;
+  }
+}
+
+#recent-posts {
+
+  a:hover .card {
+    border: 1px solid var(--aw-orange);
+    transition: 0.3s
+  }
+  .card {
+    background-color: var(--alternate-bg);
+    color: var(--font-color);
+    border: 1px solid transparent;
+    height: 100%;
+    padding: 1.5rem;
+
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-text {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .subtext {
+      font-size: 0.9rem;
+      color: var(--aw-orange);
+    }
   }
 }

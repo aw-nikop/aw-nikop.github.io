@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -52,6 +53,14 @@ const jsonLd = {
     },
   ],
 };
+const articles = await getCollection("articles");
+const recentPosts = articles
+  .sort((a, b) =>           
+    {return (
+      new Date(b.data.updatedDate || b.data.publishDate) -
+      new Date(a.data.updatedDate || a.data.publishDate)
+    )})
+  .slice(0, 3);
 ---
 
 <BaseLayout
@@ -195,7 +204,7 @@ const jsonLd = {
       <div id="what-we-do">
         <h2 class="display-4">What We Do</h2>
         <ul>
-          <li>We believe in providing good old-fashioned tech support</li>
+          <li>We believe in providing <a class="link" href="/solutions/tech-support">good old-fashioned</a> tech support</li>
           <li>
             Locally present and ready to come on-site to fix your networking
             issues
@@ -205,7 +214,7 @@ const jsonLd = {
             cater to businesses of all sizes
           </li>
           <li>
-            As Microsoft Certified techs, we are experts in setting up and
+            As <a class="link" href="/solutions/managed-it-plans/">Microsoft Certified techs</a>, we are experts in setting up and
             managing Office365 environments
           </li>
         </ul>
@@ -318,7 +327,7 @@ const jsonLd = {
           Alton Computer Solutions was established in 2006 with the idea of
           exceptional service and support paired with robust software and
           hardware solutions. Our goal is to help your business succeed by
-          providing experienced computer and networking support in a timely,
+          providing experienced computer and <a class="link" href="/solutions/networking">networking support</a> in a timely,
           professional manner with proven software, hardware, and Cloud
           Solutions.
         </p>
@@ -326,12 +335,12 @@ const jsonLd = {
           Alton Computer Solutions has more than two decades of experience
           creating hardware and software solutions for hundreds of small
           businesses. Our staff enjoys working closely with customers to create
-          systems that adapt to their unique business needs.
+          systems that adapt to their <a class="link" href="/solutions/managed-it-plans/">unique business needs</a>.
         </p>
         <p>
           Alton Computer Solutions is the outsourced IT provider for
           Seattle-area businesses. We are up to speed on the latest IT Solutions
-          that work reliability and will not break the bank. We listen to our
+          that work reliably and will not break the bank. We listen to our
           customers and do not force a “one size fits all” solution. Instead, we
           build a computer network around your specific business needs.
         </p>
@@ -536,7 +545,7 @@ const jsonLd = {
             </div>
           </a>
           <h4>Niko</h4>
-          <p>DevOps Engineer</p>
+          <p>Software Engineer</p>
         </span>
       </div>
     </div>
@@ -695,4 +704,40 @@ const jsonLd = {
       <i class="blq bi bi-quote"></i>
     </div>
   </section>
+  <section id="recent-posts">
+    <div class="container-fluid">
+      <h2 class="display-5">Recent Posts</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        {recentPosts.map((post) => (
+       <div class="col">
+          <a href=`/altons-articles/${post.slug}` class="text-decoration-none">
+   
+            <div class="card h-100">
+
+              <div class="card-body">
+                <h5 class="card-title
+                  text-truncate">{post.data.title.split("|")[0]}</h5>
+                                  <span class="subtext">
+                    {post.data.author + " | " + new Date(
+                      post.data.updatedDate || post.data.publishDate
+                    ).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </span>
+                <p class="card-text">
+                  {post.data.description.length > 199
+                    ? post.data.description.slice(0, 199) + "..."
+                    : post.data.description}
+                </p>
+              </div>
+            </div>
+          </div>
+                </a>
+        ))}
+      </div>
+
+  </section>
+  <hr>
 </BaseLayout>
