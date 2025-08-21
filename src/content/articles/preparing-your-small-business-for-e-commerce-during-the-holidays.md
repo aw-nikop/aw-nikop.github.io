@@ -7,9 +7,8 @@ updatedDate: ""
 ---
 
 # Preparing Your Small Business for e-Commerce During the Holidays
-*By Chris Alton*
 
-
+_By Chris Alton_
 
 Is your e-Commerce all it can be for the holiday shopping season? According to Deloitte’s annual holiday forecasts, ecommerce sales are predicted to be as high as $149 billion during the holiday period, which it defines as November through January. This would be up from $126.4 billion spent online in 2018, according to Deloitte’s estimates. If you are looking to increase your e-Commerce sales this holiday season, here are a few tips:
 

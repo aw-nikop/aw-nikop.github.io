@@ -7,13 +7,15 @@ updatedDate: ""
 ---
 
 # Deep dive into Phishing
-*By Niko Permilovsky*
+
+_By Niko Permilovsky_
 
 We are all familiar with the Outlook warning that “this email was sent outside of your organization” or the hassle of having to contact your IT department to have them release an invoice you have been waiting for.
 
 Let us talk about why these measures are in place in the first place, and why they are our current best solution against cybercrime.
 
 ## Human error is the biggest gap in security
+
 According to the [2024 report by Mimecast](https://assets.mimecast.com/api/public/content/state-of-email-and-collaboration-security-2024), 74% of cybersecurity breaches are caused by human error. This is due to technology improving exponentially while we are not – the weakest chain in the link is our carelessness. It may be that we think it will never happen to us, we are tired or stressed under a deadline.
 
 This is why the topic of [email phishing, impersonation, spoofing](/altons-articles/cybercriminal-attempts) and so forth have been becoming increasingly prevalent. It is an effort to educate us on keeping our data safe.
@@ -25,6 +27,7 @@ This is where education comes in; it allows you to develop instincts and judgeme
 The #1 best rule that we follow is that if there is even a little bit of suspicion, it is important to investigate.
 
 ## Anatomy of a malicious email
+
 Below is a screenshot of an email caught by the defenses that we implemented in one of our customers. Data is redacted for privacy.
 
 ![Phishing email](/how-do-phishing-emails-work-2.png)
@@ -49,4 +52,4 @@ This is why it is important to hide internal emails and addresses, use a streaml
 
 If you would like to learn tips about Outlook, check out our [5 best Outlook](/altons-articles/five-things-i-love-about-outlook) features guide.
 
-## For more information on how to protect your company against malicious emails, call us at [(206) 782-4035](tel:(206)782-4035).
+## For more information on how to protect your company against malicious emails, call us at [(206) 782-4035](<tel:(206)782-4035>).

@@ -7,7 +7,8 @@ updatedDate: ""
 ---
 
 # Time for an Upgrade
-*By Chris Alton*
+
+_By Chris Alton_
 
 Computers display signs of failing health before flashing the blue screen of death. If it takes more time to boot up your computer than it does to brew an entire pot of coffee: that’s a warning. If you can’t use your laptop without keeping it plugged in to an outlet, it’s near retirement age. The truth is that the lifetime expectancy of a desktop computer is roughly 5 years, while laptops usually last for 3 to 4 years. Here’s a quick primer on failing computer health symptoms, along with info on replacing your current computer or laptop.
 

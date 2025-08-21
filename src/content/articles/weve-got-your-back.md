@@ -7,8 +7,8 @@ updatedDate: ""
 ---
 
 # We’ve Got Your Back
-*By Chris Alton*
 
+_By Chris Alton_
 
 Remember sliding a back-up tape into a computer drive at the end of your work day? Remember forgetting to load the tape, then praying no data was lost overnight? While those tape-drive-backup-days are over for most companies, continuous backup support is a vital part of your IT system. Your computers and server contain a lot of important data that you depend on every day. If that data disappeared, you’d be as sorry as all heck (or worse).
 

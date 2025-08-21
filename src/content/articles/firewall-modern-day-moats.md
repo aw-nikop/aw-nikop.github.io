@@ -7,7 +7,8 @@ updatedDate: ""
 ---
 
 # Firewall: Modern-Day Moats
-*By Chris Alton*
+
+_By Chris Alton_
 
 In an all good, positive, happy world, no one would be trying to mine or steal your data. But as a computer tech, I can tell you that there are known and unknown threats continually trying to mine your data. That’s why a firewall—an intelligent network security system that keeps your business safe from intruders—is an essential business need. [We can help you set one up!](/solutions/firewall)
 
