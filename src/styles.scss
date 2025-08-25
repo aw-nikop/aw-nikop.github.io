@@ -972,8 +972,9 @@ div#aw-footer {
 }
 /* Alton's articles styles */
 #article-body {
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
   padding: 7vh 25vw;
+  line-height: 1.7;
 
   @media (max-width: 1000px) {
     padding: 7vh 5vw;
@@ -1001,7 +1002,7 @@ div#aw-footer {
     background-color: var(--aw-orange);
   }
 
-  h2.section {
+  h2:not(.accordion-header) {
     margin-top: 2rem;
     margin-bottom: 1rem;
     padding-left: 1rem;
@@ -1127,10 +1128,9 @@ div#aw-footer {
 }
 
 #recent-posts {
-
   a:hover .card {
     border: 1px solid var(--aw-orange);
-    transition: 0.3s
+    transition: 0.3s;
   }
   .card {
     background-color: var(--alternate-bg);

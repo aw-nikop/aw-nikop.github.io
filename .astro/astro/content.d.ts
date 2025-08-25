@@ -169,6 +169,13 @@ declare module 'astro:content' {
   collection: "articles";
   data: any
 } & { render(): Render[".md"] };
+"how-alton-computer-solutions-simplifies-it-procurement.md": {
+	id: "how-alton-computer-solutions-simplifies-it-procurement.md";
+  slug: "how-alton-computer-solutions-simplifies-it-procurement";
+  body: string;
+  collection: "articles";
+  data: any
+} & { render(): Render[".md"] };
 "how-altonworks-automated-daily-tasks.md": {
 	id: "how-altonworks-automated-daily-tasks.md";
   slug: "how-altonworks-automated-daily-tasks";
